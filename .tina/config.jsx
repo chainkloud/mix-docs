@@ -9,7 +9,7 @@ import title from "title";
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
-  "master";
+  "main";
 
 const DocsCollection = {
   name: "doc",
