@@ -1,15 +1,162 @@
 ---
 id: create-an-erc-20-token
-title: "Create an ERC20 Token"
-description: "Creates an ERC20 token owned and managed by project's backend account"
-sidebar_label: "Create an ERC20 Token"
+title: Create an ERC20 Token
+description: Creates an ERC20 token owned and managed by project's backend account
+sidebar_label: Create an ERC20 Token
 hide_title: true
 hide_table_of_contents: true
-api: {"tags":["Tokens"],"description":"Creates an ERC20 token owned and managed by project's backend account","requestBody":{"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string","example":"My Cool Token"},"symbol":{"type":"string","example":"MCT"},"initialSupply":{"type":"string","example":"0"}},"example":{"name":"My Cool Token","symbol":"MCT","initialSupply":"0"}}}}},"parameters":[{"name":"API-SECRET","in":"header","schema":{"type":"string"},"description":"(Required) You Secret API key","example":"{{secretKey}}"},{"name":"Content-Type","in":"header","schema":{"type":"string"},"example":"application/json"},{"name":"Accept","in":"header","schema":{"type":"string"},"example":"application/json"},{"name":"apiKey","in":"query","schema":{"type":"string"},"description":"(Required) You Public API key","example":"{{publicKey}}"}],"responses":{"201":{"description":"Created","content":{"application/json":{"schema":{"type":"object"},"example":{"job":{"status":"pending","_id":"62b175498c261600149409e1","name":"createToken","data":{"bridgeType":"home","accountAddress":"0xbC3bA1ae0a4Cf6269F79d0D30767C60cB58D7Ff2","name":"My Cool Token","symbol":"MCT","initialSupplyInWei":"0","tokenURI":"","expiryTimestamp":1939300629,"spendabilityIdsArr":["a","b","c"]},"createdAt":"2022-06-21T07:37:45.626Z","updatedAt":"2022-06-21T07:37:45.626Z","__v":0}}}}},"400":{"description":"Bad Request","content":{"text/plain":{"schema":{"type":"string"},"example":""}}},"401":{"description":"Unauthorized","content":{"text/plain":{"schema":{"type":"string"},"example":""}}},"403":{"description":"Forbidden","content":{"text/plain":{"schema":{"type":"string"},"example":""}}}},"method":"post","path":"/admin/tokens/create","servers":[{"url":"https://api.miexs.com/api/v0"}],"jsonRequestBodyExample":{"name":"My Cool Token","symbol":"MCT","initialSupply":"0"},"info":{"title":"Admin API","description":"With Fuse Admin API you can create and manage custodial wallets for your users to offer a Web2-like experience, as well as create, mint, and burn tokens for your economies/communities.","version":"1.0.0"},"postman":{"name":"Create an ERC20 Token","description":{"content":"Creates an ERC20 token owned and managed by project's backend account","type":"text/plain"},"url":{"path":["admin","tokens","create"],"host":["{{baseUrl}}"],"query":[{"disabled":false,"description":{"content":"(Required) You Public API key","type":"text/plain"},"key":"apiKey","value":""}],"variable":[]},"header":[{"disabled":false,"description":{"content":"(Required) You Secret API key","type":"text/plain"},"key":"API-SECRET","value":""},{"key":"Content-Type","value":"application/json"},{"key":"Accept","value":"application/json"}],"method":"POST","body":{"mode":"raw","raw":"\"\"","options":{"raw":{"language":"json"}}}}}
-sidebar_class_name: "post api-method"
+api:
+  tags:
+    - Tokens
+  description: Creates an ERC20 token owned and managed by project's backend account
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            name:
+              type: string
+              example: My Cool Token
+            symbol:
+              type: string
+              example: MCT
+            initialSupply:
+              type: string
+              example: '0'
+          example:
+            name: My Cool Token
+            symbol: MCT
+            initialSupply: '0'
+  parameters:
+    - name: API-SECRET
+      in: header
+      schema:
+        type: string
+      description: (Required) You Secret API key
+      example: '{{secretKey}}'
+    - name: Content-Type
+      in: header
+      schema:
+        type: string
+      example: application/json
+    - name: Accept
+      in: header
+      schema:
+        type: string
+      example: application/json
+    - name: apiKey
+      in: query
+      schema:
+        type: string
+      description: (Required) You Public API key
+      example: '{{publicKey}}'
+  responses:
+    '201':
+      description: Created
+      content:
+        application/json:
+          schema:
+            type: object
+          example:
+            job:
+              status: pending
+              _id: 62b175498c261600149409e1
+              name: createToken
+              data:
+                bridgeType: home
+                accountAddress: '0xbC3bA1ae0a4Cf6269F79d0D30767C60cB58D7Ff2'
+                name: My Cool Token
+                symbol: MCT
+                initialSupplyInWei: '0'
+                tokenURI: ''
+                expiryTimestamp: 1939300629
+                spendabilityIdsArr:
+                  - a
+                  - b
+                  - c
+              createdAt: '2022-06-21T07:37:45.626Z'
+              updatedAt: '2022-06-21T07:37:45.626Z'
+              __v: 0
+    '400':
+      description: Bad Request
+      content:
+        text/plain:
+          schema:
+            type: string
+          example: ''
+    '401':
+      description: Unauthorized
+      content:
+        text/plain:
+          schema:
+            type: string
+          example: ''
+    '403':
+      description: Forbidden
+      content:
+        text/plain:
+          schema:
+            type: string
+          example: ''
+  method: post
+  path: /admin/tokens/create
+  servers:
+    - url: 'https://api.miexs.com/api/v0'
+  jsonRequestBodyExample:
+    name: My Cool Token
+    symbol: MCT
+    initialSupply: '0'
+  info:
+    title: Admin API
+    description: >-
+      With Fuse Admin API you can create and manage custodial wallets for your
+      users to offer a Web2-like experience, as well as create, mint, and burn
+      tokens for your economies/communities.
+    version: 1.0.0
+  postman:
+    name: Create an ERC20 Token
+    description:
+      content: Creates an ERC20 token owned and managed by project's backend account
+      type: text/plain
+    url:
+      path:
+        - admin
+        - tokens
+        - create
+      host:
+        - '{{baseUrl}}'
+      query:
+        - disabled: false
+          description:
+            content: (Required) You Public API key
+            type: text/plain
+          key: apiKey
+          value: ''
+      variable: []
+    header:
+      - disabled: false
+        description:
+          content: (Required) You Secret API key
+          type: text/plain
+        key: API-SECRET
+        value: ''
+      - key: Content-Type
+        value: application/json
+      - key: Accept
+        value: application/json
+    method: POST
+    body:
+      mode: raw
+      raw: '""'
+      options:
+        raw:
+          language: json
+sidebar_class_name: post api-method
 info_path: docs/admin-api/admin-api
 custom_edit_url: null
 ---
+
 
 import ApiTabs from "@theme/ApiTabs";
 import DiscriminatorTabs from "@theme/DiscriminatorTabs";
