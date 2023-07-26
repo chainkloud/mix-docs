@@ -1,15 +1,109 @@
 ---
 id: update-webhook
-title: "Update Webhook"
-description: "Update webhook's `webhookUrl` or `eventType`"
-sidebar_label: "Update Webhook"
+title: Update Webhook
+description: Update webhook's `webhookUrl` or `eventType`
+sidebar_label: Update Webhook
 hide_title: true
 hide_table_of_contents: true
-api: {"tags":["Webhooks"],"description":"Update webhook's `webhookUrl` or `eventType`","requestBody":{"content":{"application/json":{"schema":{"type":"object","properties":{"webhookId":{"type":"string","example":"62d3f2aa15a8393bd802c313"},"webhookUrl":{"type":"string","example":"https://webhook.site/d7a716ac-8119-4114-9586-f0667c2cb1e3"},"eventType":{"type":"string","example":"ERC20"}},"example":{"webhookId":"62da85e69b1568215223a9dd","webhookUrl":"https://webhook.site/03521015-b7f6-4a43-9ad9-eb5d2e6ca15b","eventType":"ALL"}}}}},"parameters":[{"name":"API-SECRET","in":"header","schema":{"type":"string"},"example":"{{secretKey}}"},{"name":"apiKey","in":"query","schema":{"type":"string"},"example":"{{publicKey}}"}],"responses":{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object"},"example":{"_id":"62d3f2aa15a8393bd802c313","projectId":"62ce87c8131bbffe0f83af65","webhookUrl":"https://webhook.site/d7a716ac-8119-4114-9586-f0667c2cb1e3","eventType":"ERC20","createdAt":"2022-07-17T11:29:46.459Z","updatedAt":"2022-07-17T11:31:22.776Z","__v":0}}}}},"method":"put","path":"/notifications/webhook","servers":[{"url":"https://api.miexs.com/api/v0"}],"jsonRequestBodyExample":{"webhookId":"62da85e69b1568215223a9dd","webhookUrl":"https://webhook.site/03521015-b7f6-4a43-9ad9-eb5d2e6ca15b","eventType":"ALL"},"info":{"title":"Notifications API","version":"1.0.0"},"postman":{"name":"Update Webhook","description":{"content":"Update webhook's `webhookUrl` or `eventType`","type":"text/plain"},"url":{"path":["notifications","webhook"],"host":["{{baseUrl}}"],"query":[{"disabled":false,"key":"apiKey","value":""}],"variable":[]},"header":[{"disabled":false,"description":{"content":"","type":"text/plain"},"key":"API-SECRET","value":""},{"key":"Content-Type","value":"application/json"},{"key":"Accept","value":"application/json"}],"method":"PUT","body":{"mode":"raw","raw":"\"\"","options":{"raw":{"language":"json"}}}}}
-sidebar_class_name: "put api-method"
+api:
+  tags:
+    - Webhooks
+  description: Update webhook's `webhookUrl` or `eventType`
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            webhookId:
+              type: string
+              example: 62d3f2aa15a8393bd802c313
+            webhookUrl:
+              type: string
+              example: 'https://webhook.site/d7a716ac-8119-4114-9586-f0667c2cb1e3'
+            eventType:
+              type: string
+              example: ERC20
+          example:
+            webhookId: 62da85e69b1568215223a9dd
+            webhookUrl: 'https://webhook.site/03521015-b7f6-4a43-9ad9-eb5d2e6ca15b'
+            eventType: ALL
+  parameters:
+    - name: API-SECRET
+      in: header
+      schema:
+        type: string
+      example: '{{secretKey}}'
+    - name: apiKey
+      in: query
+      schema:
+        type: string
+      example: '{{publicKey}}'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+          example:
+            _id: 62d3f2aa15a8393bd802c313
+            projectId: 62ce87c8131bbffe0f83af65
+            webhookUrl: 'https://webhook.site/d7a716ac-8119-4114-9586-f0667c2cb1e3'
+            eventType: ERC20
+            createdAt: '2022-07-17T11:29:46.459Z'
+            updatedAt: '2022-07-17T11:31:22.776Z'
+            __v: 0
+  method: put
+  path: /notifications/webhook
+  servers:
+    - url: 'https://api.miexs.com/api/v0'
+  jsonRequestBodyExample:
+    webhookId: 62da85e69b1568215223a9dd
+    webhookUrl: 'https://webhook.site/03521015-b7f6-4a43-9ad9-eb5d2e6ca15b'
+    eventType: ALL
+  info:
+    title: Notifications API
+    version: 1.0.0
+  postman:
+    name: Update Webhook
+    description:
+      content: Update webhook's `webhookUrl` or `eventType`
+      type: text/plain
+    url:
+      path:
+        - notifications
+        - webhook
+      host:
+        - '{{baseUrl}}'
+      query:
+        - disabled: false
+          key: apiKey
+          value: ''
+      variable: []
+    header:
+      - disabled: false
+        description:
+          content: ''
+          type: text/plain
+        key: API-SECRET
+        value: ''
+      - key: Content-Type
+        value: application/json
+      - key: Accept
+        value: application/json
+    method: PUT
+    body:
+      mode: raw
+      raw: '""'
+      options:
+        raw:
+          language: json
+sidebar_class_name: put api-method
 info_path: docs/notification-api/notifications-api
 custom_edit_url: null
 ---
+
 
 import ApiTabs from "@theme/ApiTabs";
 import DiscriminatorTabs from "@theme/DiscriminatorTabs";
