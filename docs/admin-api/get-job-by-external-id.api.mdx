@@ -1,15 +1,81 @@
 ---
 id: get-job-by-external-id
-title: "Get Job by External Id"
-description: "Check the status of a job you created by jobId"
-sidebar_label: "Get Job by External Id"
+title: Get Job by External Id
+description: Check the status of a job you created by jobId
+sidebar_label: Get Job by External Id
 hide_title: true
 hide_table_of_contents: true
-api: {"tags":["Jobs API"],"description":"Check the status of a job you created by jobId","parameters":[{"name":"API-SECRET","in":"header","schema":{"type":"string"},"description":"(Required) You Secret API key","example":"{{secretKey}}"},{"name":"externalId","in":"query","schema":{"type":"string"},"example":"{{externalId}}"},{"name":"apiKey","in":"query","schema":{"type":"string"},"example":"{{publicKey}}"}],"responses":{"200":{"description":"Successful response","content":{"application/json":{}}}},"method":"get","path":"/jobs/external","servers":[{"url":"https://api.miexs.com/api/v0"}],"info":{"title":"Admin API","description":"With Fuse Admin API you can create and manage custodial wallets for your users to offer a Web2-like experience, as well as create, mint, and burn tokens for your economies/communities.","version":"1.0.0"},"postman":{"name":"Get Job by External Id","description":{"content":"Check the status of a job you created by jobId","type":"text/plain"},"url":{"path":["jobs","external"],"host":["{{baseUrl}}"],"query":[{"disabled":false,"key":"externalId","value":""},{"disabled":false,"key":"apiKey","value":""}],"variable":[]},"header":[{"disabled":false,"description":{"content":"(Required) You Secret API key","type":"text/plain"},"key":"API-SECRET","value":""},{"key":"Accept","value":"application/json"}],"method":"GET"}}
-sidebar_class_name: "get api-method"
+api:
+  tags:
+    - Jobs API
+  description: Check the status of a job you created by jobId
+  parameters:
+    - name: API-SECRET
+      in: header
+      schema:
+        type: string
+      description: (Required) You Secret API key
+      example: '{{secretKey}}'
+    - name: externalId
+      in: query
+      schema:
+        type: string
+      example: '{{externalId}}'
+    - name: apiKey
+      in: query
+      schema:
+        type: string
+      example: '{{publicKey}}'
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}
+  method: get
+  path: /jobs/external
+  servers:
+    - url: 'https://api.miexs.com/api/v0'
+  info:
+    title: Admin API
+    description: >-
+      With Fuse Admin API you can create and manage custodial wallets for your
+      users to offer a Web2-like experience, as well as create, mint, and burn
+      tokens for your economies/communities.
+    version: 1.0.0
+  postman:
+    name: Get Job by External Id
+    description:
+      content: Check the status of a job you created by jobId
+      type: text/plain
+    url:
+      path:
+        - jobs
+        - external
+      host:
+        - '{{baseUrl}}'
+      query:
+        - disabled: false
+          key: externalId
+          value: ''
+        - disabled: false
+          key: apiKey
+          value: ''
+      variable: []
+    header:
+      - disabled: false
+        description:
+          content: (Required) You Secret API key
+          type: text/plain
+        key: API-SECRET
+        value: ''
+      - key: Accept
+        value: application/json
+    method: GET
+sidebar_class_name: get api-method
 info_path: docs/admin-api/admin-api
 custom_edit_url: null
 ---
+
 
 import ApiTabs from "@theme/ApiTabs";
 import DiscriminatorTabs from "@theme/DiscriminatorTabs";
