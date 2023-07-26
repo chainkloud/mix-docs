@@ -1,15 +1,120 @@
 ---
 id: create-wallet
-title: "Create Wallet"
-description: "Create a smart wallet for the authenticated user"
-sidebar_label: "Create Wallet"
+title: Create Wallet
+description: Create a smart wallet for the authenticated user
+sidebar_label: Create Wallet
 hide_title: true
 hide_table_of_contents: true
-api: {"tags":["Smart Wallets"],"description":"Create a smart wallet for the authenticated user","requestBody":{"content":{"application/json":{"schema":{"type":"object"}}}},"security":[{"bearerAuth":[]}],"parameters":[{"name":"apiKey","in":"query","schema":{"type":"string"},"description":"(Required) Your Public API key","example":"{{publicKey}}"}],"responses":{"201":{"description":"Created","content":{"application/json":{"schema":{"type":"object"},"example":{"connectionUrl":"ws://localhost:5007","transactionId":"0x06515e558ba48471b24096015ef763ae034ad933ddae1800a4e79459bd310ffb"}}}},"401":{"description":"Unauthorized","content":{"application/json":{"schema":{"type":"object"},"example":{"statusCode":401,"errorMessage":{"statusCode":401,"message":"Unauthorized"},"path":"/api/v1/smart-wallets/create?apiKey={{publicKey}}"}}}},"403":{"description":"Forbidden","content":{"application/json":{"schema":{"type":"object"},"example":{"statusCode":403,"errorMessage":{"statusCode":403,"message":"Forbidden resource","error":"Forbidden"},"path":"/api/v1/smart-wallets/create?apiKey={{publicKey}}"}}}}},"method":"post","path":"/api/v1/smart-wallets/create","servers":[{"url":"https://api.miexs.com"}],"securitySchemes":{"bearerAuth":{"bearerFormat":"JWT","type":"http","scheme":"bearer"}},"jsonRequestBodyExample":{},"info":{"title":"Smart Wallets API","version":"1.0.0"},"postman":{"name":"Create Wallet","description":{"content":"Create a smart wallet for the authenticated user","type":"text/plain"},"url":{"path":["api","v1","smart-wallets","create"],"host":["{{baseUrl}}"],"query":[{"disabled":false,"description":{"content":"(Required) Your Public API key","type":"text/plain"},"key":"apiKey","value":""}],"variable":[]},"header":[{"key":"Content-Type","value":"application/json"},{"key":"Accept","value":"application/json"}],"method":"POST","body":{"mode":"raw","raw":"\"\"","options":{"raw":{"language":"json"}}},"auth":{"type":"bearer","bearer":[{"type":"any","value":"<Bearer Token>","key":"token"}]}}}
-sidebar_class_name: "post api-method"
+api:
+  tags:
+    - Smart Wallets
+  description: Create a smart wallet for the authenticated user
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: apiKey
+      in: query
+      schema:
+        type: string
+      description: (Required) Your Public API key
+      example: '{{publicKey}}'
+  responses:
+    '201':
+      description: Created
+      content:
+        application/json:
+          schema:
+            type: object
+          example:
+            connectionUrl: 'ws://localhost:5007'
+            transactionId: '0x06515e558ba48471b24096015ef763ae034ad933ddae1800a4e79459bd310ffb'
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            type: object
+          example:
+            statusCode: 401
+            errorMessage:
+              statusCode: 401
+              message: Unauthorized
+            path: '/api/v1/smart-wallets/create?apiKey={{publicKey}}'
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            type: object
+          example:
+            statusCode: 403
+            errorMessage:
+              statusCode: 403
+              message: Forbidden resource
+              error: Forbidden
+            path: '/api/v1/smart-wallets/create?apiKey={{publicKey}}'
+  method: post
+  path: /api/v1/smart-wallets/create
+  servers:
+    - url: 'https://api.miexs.com'
+  securitySchemes:
+    bearerAuth:
+      bearerFormat: JWT
+      type: http
+      scheme: bearer
+  jsonRequestBodyExample: {}
+  info:
+    title: Smart Wallets API
+    version: 1.0.0
+  postman:
+    name: Create Wallet
+    description:
+      content: Create a smart wallet for the authenticated user
+      type: text/plain
+    url:
+      path:
+        - api
+        - v1
+        - smart-wallets
+        - create
+      host:
+        - '{{baseUrl}}'
+      query:
+        - disabled: false
+          description:
+            content: (Required) Your Public API key
+            type: text/plain
+          key: apiKey
+          value: ''
+      variable: []
+    header:
+      - key: Content-Type
+        value: application/json
+      - key: Accept
+        value: application/json
+    method: POST
+    body:
+      mode: raw
+      raw: '""'
+      options:
+        raw:
+          language: json
+    auth:
+      type: bearer
+      bearer:
+        - type: any
+          value: <Bearer Token>
+          key: token
+sidebar_class_name: post api-method
 info_path: docs/smart-wallet-api/smart-wallets-api
 custom_edit_url: null
 ---
+
 
 import ApiTabs from "@theme/ApiTabs";
 import DiscriminatorTabs from "@theme/DiscriminatorTabs";
