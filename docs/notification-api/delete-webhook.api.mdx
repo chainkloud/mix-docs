@@ -1,15 +1,91 @@
 ---
 id: delete-webhook
-title: "Delete Webhook"
-description: "Delete Webhook"
-sidebar_label: "Delete Webhook"
+title: Delete Webhook
+description: Delete Webhook
+sidebar_label: Delete Webhook
 hide_title: true
 hide_table_of_contents: true
-api: {"tags":["Webhooks"],"parameters":[{"name":"API-SECRET","in":"header","schema":{"type":"string"},"example":"{{secretKey}}"},{"name":"apiKey","in":"query","schema":{"type":"string"},"example":"{{publicKey}}"},{"name":"webhookId","in":"path","schema":{"type":"string"},"required":true,"example":"630bce35495c43af6627cbfa"}],"responses":{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object"},"example":{"_id":"630bce35495c43af6627cbfa","projectId":"62ce87c8131bbffe0f83af65","webhookUrl":"https://webhook.site/3a27d99c-ccd2-496d-a50b-8ffd073c7e44","eventType":"ALL","createdAt":"2022-08-28T20:21:09.710Z","updatedAt":"2022-08-28T20:21:09.710Z","__v":0}}}}},"description":"Delete Webhook","method":"delete","path":"/notifications/webhook/{webhookId}","servers":[{"url":"https://api.miexs.com/api/v0"}],"info":{"title":"Notifications API","version":"1.0.0"},"postman":{"name":"Delete Webhook","description":{"type":"text/plain"},"url":{"path":["notifications","webhook",":webhookId"],"host":["{{baseUrl}}"],"query":[{"disabled":false,"key":"apiKey","value":""}],"variable":[{"disabled":false,"description":{"content":"(Required) ","type":"text/plain"},"type":"any","value":"","key":"webhookId"}]},"header":[{"disabled":false,"description":{"content":"","type":"text/plain"},"key":"API-SECRET","value":""},{"key":"Accept","value":"application/json"}],"method":"DELETE"}}
-sidebar_class_name: "delete api-method"
+api:
+  tags:
+    - Webhooks
+  parameters:
+    - name: API-SECRET
+      in: header
+      schema:
+        type: string
+      example: '{{secretKey}}'
+    - name: apiKey
+      in: query
+      schema:
+        type: string
+      example: '{{publicKey}}'
+    - name: webhookId
+      in: path
+      schema:
+        type: string
+      required: true
+      example: 630bce35495c43af6627cbfa
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+          example:
+            _id: 630bce35495c43af6627cbfa
+            projectId: 62ce87c8131bbffe0f83af65
+            webhookUrl: 'https://webhook.site/3a27d99c-ccd2-496d-a50b-8ffd073c7e44'
+            eventType: ALL
+            createdAt: '2022-08-28T20:21:09.710Z'
+            updatedAt: '2022-08-28T20:21:09.710Z'
+            __v: 0
+  description: Delete Webhook
+  method: delete
+  path: '/notifications/webhook/{webhookId}'
+  servers:
+    - url: 'https://api.miexs.com/api/v0'
+  info:
+    title: Notifications API
+    version: 1.0.0
+  postman:
+    name: Delete Webhook
+    description:
+      type: text/plain
+    url:
+      path:
+        - notifications
+        - webhook
+        - ':webhookId'
+      host:
+        - '{{baseUrl}}'
+      query:
+        - disabled: false
+          key: apiKey
+          value: ''
+      variable:
+        - disabled: false
+          description:
+            content: '(Required) '
+            type: text/plain
+          type: any
+          value: ''
+          key: webhookId
+    header:
+      - disabled: false
+        description:
+          content: ''
+          type: text/plain
+        key: API-SECRET
+        value: ''
+      - key: Accept
+        value: application/json
+    method: DELETE
+sidebar_class_name: delete api-method
 info_path: docs/notification-api/notifications-api
 custom_edit_url: null
 ---
+
 
 import ApiTabs from "@theme/ApiTabs";
 import DiscriminatorTabs from "@theme/DiscriminatorTabs";
