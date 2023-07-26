@@ -1,15 +1,108 @@
 ---
 id: get-tokens-by-address
-title: "Get Tokens by Address"
-description: "Get a token by `tokenAddress`"
-sidebar_label: "Get Tokens by Address"
+title: Get Tokens by Address
+description: Get a token by `tokenAddress`
+sidebar_label: Get Tokens by Address
 hide_title: true
 hide_table_of_contents: true
-api: {"tags":["Tokens"],"description":"Get a token by `tokenAddress`","parameters":[{"name":"API-SECRET","in":"header","schema":{"type":"string"},"example":"{{secretKey}}"},{"name":"apiKey","in":"query","schema":{"type":"string"},"example":"{{publicKey}}"},{"name":"tokenAddress","in":"path","schema":{"type":"string"},"required":true,"example":"0x6F353A3A737bF3f6442BEc6246411E513285882E"}],"responses":{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object"},"example":{"data":{"decimals":18,"spendabilityIds":["a","b","c"],"_id":"62f2cddd78f2e5001415f396","address":"0x6F353A3A737bF3f6442BEc6246411E513285882E","name":"My Cool Token","symbol":"MCT","tokenURI":"","totalSupply":"0","owner":"0xFDf589954F97b376F0794990d47948371f6824B1","blockNumber":18521317,"tokenType":"expirable","networkType":"home","expiryTimestamp":1939300629,"createdAt":"2022-08-09T21:13:01.405Z","updatedAt":"2022-08-09T21:13:01.405Z"}}}}}},"method":"get","path":"/admin/tokens/{tokenAddress}","servers":[{"url":"https://api.miexs.com/api/v0"}],"info":{"title":"Admin API","description":"With Fuse Admin API you can create and manage custodial wallets for your users to offer a Web2-like experience, as well as create, mint, and burn tokens for your economies/communities.","version":"1.0.0"},"postman":{"name":"Get Tokens by Address","description":{"content":"Get a token by `tokenAddress`","type":"text/plain"},"url":{"path":["admin","tokens",":tokenAddress"],"host":["{{baseUrl}}"],"query":[{"disabled":false,"key":"apiKey","value":""}],"variable":[{"disabled":false,"description":{"content":"(Required) ","type":"text/plain"},"type":"any","value":"","key":"tokenAddress"}]},"header":[{"disabled":false,"description":{"content":"","type":"text/plain"},"key":"API-SECRET","value":""},{"key":"Accept","value":"application/json"}],"method":"GET"}}
-sidebar_class_name: "get api-method"
+api:
+  tags:
+    - Tokens
+  description: Get a token by `tokenAddress`
+  parameters:
+    - name: API-SECRET
+      in: header
+      schema:
+        type: string
+      example: '{{secretKey}}'
+    - name: apiKey
+      in: query
+      schema:
+        type: string
+      example: '{{publicKey}}'
+    - name: tokenAddress
+      in: path
+      schema:
+        type: string
+      required: true
+      example: '0x6F353A3A737bF3f6442BEc6246411E513285882E'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+          example:
+            data:
+              decimals: 18
+              spendabilityIds:
+                - a
+                - b
+                - c
+              _id: 62f2cddd78f2e5001415f396
+              address: '0x6F353A3A737bF3f6442BEc6246411E513285882E'
+              name: My Cool Token
+              symbol: MCT
+              tokenURI: ''
+              totalSupply: '0'
+              owner: '0xFDf589954F97b376F0794990d47948371f6824B1'
+              blockNumber: 18521317
+              tokenType: expirable
+              networkType: home
+              expiryTimestamp: 1939300629
+              createdAt: '2022-08-09T21:13:01.405Z'
+              updatedAt: '2022-08-09T21:13:01.405Z'
+  method: get
+  path: '/admin/tokens/{tokenAddress}'
+  servers:
+    - url: 'https://api.miexs.com/api/v0'
+  info:
+    title: Admin API
+    description: >-
+      With Fuse Admin API you can create and manage custodial wallets for your
+      users to offer a Web2-like experience, as well as create, mint, and burn
+      tokens for your economies/communities.
+    version: 1.0.0
+  postman:
+    name: Get Tokens by Address
+    description:
+      content: Get a token by `tokenAddress`
+      type: text/plain
+    url:
+      path:
+        - admin
+        - tokens
+        - ':tokenAddress'
+      host:
+        - '{{baseUrl}}'
+      query:
+        - disabled: false
+          key: apiKey
+          value: ''
+      variable:
+        - disabled: false
+          description:
+            content: '(Required) '
+            type: text/plain
+          type: any
+          value: ''
+          key: tokenAddress
+    header:
+      - disabled: false
+        description:
+          content: ''
+          type: text/plain
+        key: API-SECRET
+        value: ''
+      - key: Accept
+        value: application/json
+    method: GET
+sidebar_class_name: get api-method
 info_path: docs/admin-api/admin-api
 custom_edit_url: null
 ---
+
 
 import ApiTabs from "@theme/ApiTabs";
 import DiscriminatorTabs from "@theme/DiscriminatorTabs";
