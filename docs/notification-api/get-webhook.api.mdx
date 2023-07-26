@@ -1,15 +1,92 @@
 ---
 id: get-webhook
-title: "Get Webhook"
-description: "Find a webhook by id"
-sidebar_label: "Get Webhook"
+title: Get Webhook
+description: Find a webhook by id
+sidebar_label: Get Webhook
 hide_title: true
 hide_table_of_contents: true
-api: {"tags":["Webhooks"],"description":"Find a webhook by id","parameters":[{"name":"API-SECRET","in":"header","schema":{"type":"string"},"example":"{{secretKey}}"},{"name":"apiKey","in":"query","schema":{"type":"string"},"example":"{{publicKey}}"},{"name":"webhookId","in":"path","schema":{"type":"string"},"required":true,"example":"62d3f2aa15a8393bd802c313"}],"responses":{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object"},"example":{"_id":"62d3f2aa15a8393bd802c313","projectId":"62ce87c8131bbffe0f83af65","webhookUrl":"https://webhook.site/d7a716ac-8119-4114-9586-f0667c2cb1e1","eventType":"ALL","createdAt":"2022-07-17T11:29:46.459Z","updatedAt":"2022-07-17T11:29:46.459Z","__v":0}}}}},"method":"get","path":"/notifications/webhook/{webhookId}","servers":[{"url":"https://api.miexs.com/api/v0"}],"info":{"title":"Notifications API","version":"1.0.0"},"postman":{"name":"Get Webhook","description":{"content":"Find a webhook by id","type":"text/plain"},"url":{"path":["notifications","webhook",":webhookId"],"host":["{{baseUrl}}"],"query":[{"disabled":false,"key":"apiKey","value":""}],"variable":[{"disabled":false,"description":{"content":"(Required) ","type":"text/plain"},"type":"any","value":"","key":"webhookId"}]},"header":[{"disabled":false,"description":{"content":"","type":"text/plain"},"key":"API-SECRET","value":""},{"key":"Accept","value":"application/json"}],"method":"GET"}}
-sidebar_class_name: "get api-method"
+api:
+  tags:
+    - Webhooks
+  description: Find a webhook by id
+  parameters:
+    - name: API-SECRET
+      in: header
+      schema:
+        type: string
+      example: '{{secretKey}}'
+    - name: apiKey
+      in: query
+      schema:
+        type: string
+      example: '{{publicKey}}'
+    - name: webhookId
+      in: path
+      schema:
+        type: string
+      required: true
+      example: 62d3f2aa15a8393bd802c313
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+          example:
+            _id: 62d3f2aa15a8393bd802c313
+            projectId: 62ce87c8131bbffe0f83af65
+            webhookUrl: 'https://webhook.site/d7a716ac-8119-4114-9586-f0667c2cb1e1'
+            eventType: ALL
+            createdAt: '2022-07-17T11:29:46.459Z'
+            updatedAt: '2022-07-17T11:29:46.459Z'
+            __v: 0
+  method: get
+  path: '/notifications/webhook/{webhookId}'
+  servers:
+    - url: 'https://api.miexs.com/api/v0'
+  info:
+    title: Notifications API
+    version: 1.0.0
+  postman:
+    name: Get Webhook
+    description:
+      content: Find a webhook by id
+      type: text/plain
+    url:
+      path:
+        - notifications
+        - webhook
+        - ':webhookId'
+      host:
+        - '{{baseUrl}}'
+      query:
+        - disabled: false
+          key: apiKey
+          value: ''
+      variable:
+        - disabled: false
+          description:
+            content: '(Required) '
+            type: text/plain
+          type: any
+          value: ''
+          key: webhookId
+    header:
+      - disabled: false
+        description:
+          content: ''
+          type: text/plain
+        key: API-SECRET
+        value: ''
+      - key: Accept
+        value: application/json
+    method: GET
+sidebar_class_name: get api-method
 info_path: docs/notification-api/notifications-api
 custom_edit_url: null
 ---
+
 
 import ApiTabs from "@theme/ApiTabs";
 import DiscriminatorTabs from "@theme/DiscriminatorTabs";
