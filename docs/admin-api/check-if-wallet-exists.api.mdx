@@ -1,15 +1,113 @@
 ---
 id: check-if-wallet-exists
-title: "Check if Wallet Exists"
-description: "Check if the given `walletAddress` exists"
-sidebar_label: "Check if Wallet Exists"
+title: Check if Wallet Exists
+description: Check if the given `walletAddress` exists
+sidebar_label: Check if Wallet Exists
 hide_title: true
 hide_table_of_contents: true
-api: {"tags":["Wallets"],"description":"Check if the given `walletAddress` exists","parameters":[{"name":"API-SECRET","in":"header","schema":{"type":"string"},"description":"(Required) You Secret API key","example":"{{secretKey}}"},{"name":"Content-Type","in":"header","schema":{"type":"string"},"example":"application/json"},{"name":"Accept","in":"header","schema":{"type":"string"},"example":"application/json"},{"name":"apiKey","in":"query","schema":{"type":"string"},"description":"(Required) You Public API key","example":"{{publicKey}}"},{"name":"walletAddress","in":"path","schema":{"type":"string"},"required":true,"example":"0x11Dd9c1293561044888F4edd96C9A372E6Eb7Cf9"}],"responses":{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object"},"examples":{"example-0":{"summary":"Wallet exists","value":{"data":true}},"example-1":{"summary":"Wallet does not exist","value":{"data":false}}}}}}},"method":"get","path":"/admin/wallets/exists/{walletAddress}","servers":[{"url":"https://api.miexs.com/api/v0"}],"info":{"title":"Admin API","description":"With Fuse Admin API you can create and manage custodial wallets for your users to offer a Web2-like experience, as well as create, mint, and burn tokens for your economies/communities.","version":"1.0.0"},"postman":{"name":"Check if Wallet Exists","description":{"content":"Check if the given `walletAddress` exists","type":"text/plain"},"url":{"path":["admin","wallets","exists",":walletAddress"],"host":["{{baseUrl}}"],"query":[{"disabled":false,"description":{"content":"(Required) You Public API key","type":"text/plain"},"key":"apiKey","value":""}],"variable":[{"disabled":false,"description":{"content":"(Required) ","type":"text/plain"},"type":"any","value":"","key":"walletAddress"}]},"header":[{"disabled":false,"description":{"content":"(Required) You Secret API key","type":"text/plain"},"key":"API-SECRET","value":""},{"key":"Accept","value":"application/json"}],"method":"GET"}}
-sidebar_class_name: "get api-method"
+api:
+  tags:
+    - Wallets
+  description: Check if the given `walletAddress` exists
+  parameters:
+    - name: API-SECRET
+      in: header
+      schema:
+        type: string
+      description: (Required) You Secret API key
+      example: '{{secretKey}}'
+    - name: Content-Type
+      in: header
+      schema:
+        type: string
+      example: application/json
+    - name: Accept
+      in: header
+      schema:
+        type: string
+      example: application/json
+    - name: apiKey
+      in: query
+      schema:
+        type: string
+      description: (Required) You Public API key
+      example: '{{publicKey}}'
+    - name: walletAddress
+      in: path
+      schema:
+        type: string
+      required: true
+      example: '0x11Dd9c1293561044888F4edd96C9A372E6Eb7Cf9'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+          examples:
+            example-0:
+              summary: Wallet exists
+              value:
+                data: true
+            example-1:
+              summary: Wallet does not exist
+              value:
+                data: false
+  method: get
+  path: '/admin/wallets/exists/{walletAddress}'
+  servers:
+    - url: 'https://api.miexs.com/api/v0'
+  info:
+    title: Admin API
+    description: >-
+      With Fuse Admin API you can create and manage custodial wallets for your
+      users to offer a Web2-like experience, as well as create, mint, and burn
+      tokens for your economies/communities.
+    version: 1.0.0
+  postman:
+    name: Check if Wallet Exists
+    description:
+      content: Check if the given `walletAddress` exists
+      type: text/plain
+    url:
+      path:
+        - admin
+        - wallets
+        - exists
+        - ':walletAddress'
+      host:
+        - '{{baseUrl}}'
+      query:
+        - disabled: false
+          description:
+            content: (Required) You Public API key
+            type: text/plain
+          key: apiKey
+          value: ''
+      variable:
+        - disabled: false
+          description:
+            content: '(Required) '
+            type: text/plain
+          type: any
+          value: ''
+          key: walletAddress
+    header:
+      - disabled: false
+        description:
+          content: (Required) You Secret API key
+          type: text/plain
+        key: API-SECRET
+        value: ''
+      - key: Accept
+        value: application/json
+    method: GET
+sidebar_class_name: get api-method
 info_path: docs/admin-api/admin-api
 custom_edit_url: null
 ---
+
 
 import ApiTabs from "@theme/ApiTabs";
 import DiscriminatorTabs from "@theme/DiscriminatorTabs";
