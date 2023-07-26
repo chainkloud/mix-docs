@@ -1,15 +1,337 @@
 ---
 id: get-a-quote-for-a-token-pair
-title: "Get a Quote for a Token Pair"
-description: "Get a Quote for a Token Pair"
-sidebar_label: "Get a Quote for a Token Pair"
+title: Get a Quote for a Token Pair
+description: Get a Quote for a Token Pair
+sidebar_label: Get a Quote for a Token Pair
 hide_title: true
 hide_table_of_contents: true
-api: {"tags":["Swap"],"requestBody":{"content":{"application/json":{"schema":{"type":"object","properties":{"currencyIn":{"type":"string","example":"0x495d133B938596C9984d462F007B676bDc57eCEC"},"currencyOut":{"type":"string","example":"0x0BE9e53fd7EDaC9F859882AfdDa116645287C629"},"amountIn":{"type":"string","example":"1000"}},"example":{"currencyIn":"0x495d133B938596C9984d462F007B676bDc57eCEC","currencyOut":"0x0BE9e53fd7EDaC9F859882AfdDa116645287C629","amountIn":"1000"}}}}},"parameters":[{"name":"apiKey","in":"query","schema":{"type":"string"},"description":"(Required) Your Public API key","example":"{{publicKey}}"}],"responses":{"201":{"description":"Created","headers":{"Date":{"schema":{"type":"string","example":"Thu, 23 Jun 2022 11:36:07 GMT"}},"Content-Type":{"schema":{"type":"string","example":"application/json; charset=utf-8"}},"Content-Length":{"schema":{"type":"integer","example":"3630"}},"Connection":{"schema":{"type":"string","example":"keep-alive"}},"X-Powered-By":{"schema":{"type":"string","example":"Express"}},"ETag":{"schema":{"type":"string","example":"W/\"e2e-HaQC/0hWJXL2mYdt9hyE4vBnB9M\""}}},"content":{"application/json":{"schema":{"type":"object"},"examples":{"example-0":{"summary":"Successful Response","value":{"data":{"info":{"inputAmount":"1000","outputAmount":"2.0988","route":["G$","WFUSE"],"inputToken":"G$","outputToken":"WFUSE","executionPrice":"0.0020988","nextMidPrice":"0.00210509","priceImpact":"0.30144"},"trade":{"route":{"pairs":[{"liquidityToken":{"decimals":18,"symbol":"VLP","name":"Voltage LP Token","chainId":761412,"address":"0xa02ed9Fe9e3351FE2cd1F588B23973C1542dCbCC"},"tokenAmounts":[{"numerator":[935045727,778394003,126296],"denominator":[660865024,931322574],"currency":{"decimals":18,"symbol":"WFUSE","name":"Wrapped Mix","chainId":761412,"address":"0x0BE9e53fd7EDaC9F859882AfdDa116645287C629"},"token":{"decimals":18,"symbol":"WFUSE","name":"Wrapped Mix","chainId":761412,"address":"0x0BE9e53fd7EDaC9F859882AfdDa116645287C629"}},{"numerator":[474411765,6],"denominator":[100],"currency":{"decimals":2,"symbol":"G$","name":"GoodDollar","chainId":761412,"address":"0x495d133B938596C9984d462F007B676bDc57eCEC"},"token":{"decimals":2,"symbol":"G$","name":"GoodDollar","chainId":761412,"address":"0x495d133B938596C9984d462F007B676bDc57eCEC"}}]}],"path":[{"decimals":2,"symbol":"G$","name":"GoodDollar","chainId":761412,"address":"0x495d133B938596C9984d462F007B676bDc57eCEC"},{"decimals":18,"symbol":"WFUSE","name":"Wrapped Mix","chainId":761412,"address":"0x0BE9e53fd7EDaC9F859882AfdDa116645287C629"}],"midPrice":{"numerator":[935045727,778394003,126296],"denominator":[474411765,6],"baseCurrency":{"decimals":2,"symbol":"G$","name":"GoodDollar","chainId":761412,"address":"0x495d133B938596C9984d462F007B676bDc57eCEC"},"quoteCurrency":{"decimals":18,"symbol":"WFUSE","name":"Wrapped Mix","chainId":761412,"address":"0x0BE9e53fd7EDaC9F859882AfdDa116645287C629"},"scalar":{"numerator":[100],"denominator":[660865024,931322574]}},"input":{"decimals":2,"symbol":"G$","name":"GoodDollar","chainId":761412,"address":"0x495d133B938596C9984d462F007B676bDc57eCEC"},"output":{"decimals":18,"symbol":"WFUSE","name":"Wrapped Mix","chainId":761412,"address":"0x0BE9e53fd7EDaC9F859882AfdDa116645287C629"}},"tradeType":0,"inputAmount":{"numerator":[100000],"denominator":[100],"currency":{"decimals":2,"symbol":"G$","name":"GoodDollar","chainId":761412,"address":"0x495d133B938596C9984d462F007B676bDc57eCEC"},"token":{"decimals":2,"symbol":"G$","name":"GoodDollar","chainId":761412,"address":"0x495d133B938596C9984d462F007B676bDc57eCEC"}},"outputAmount":{"numerator":[847411068,880920317,1],"denominator":[660865024,931322574],"currency":{"decimals":18,"symbol":"WFUSE","name":"Wrapped Mix","chainId":761412,"address":"0x0BE9e53fd7EDaC9F859882AfdDa116645287C629"},"token":{"decimals":18,"symbol":"WFUSE","name":"Wrapped Mix","chainId":761412,"address":"0x0BE9e53fd7EDaC9F859882AfdDa116645287C629"}},"executionPrice":{"numerator":[847411068,880920317,1],"denominator":[100000],"baseCurrency":{"decimals":2,"symbol":"G$","name":"GoodDollar","chainId":761412,"address":"0x495d133B938596C9984d462F007B676bDc57eCEC"},"quoteCurrency":{"decimals":18,"symbol":"WFUSE","name":"Wrapped Mix","chainId":761412,"address":"0x0BE9e53fd7EDaC9F859882AfdDa116645287C629"},"scalar":{"numerator":[100],"denominator":[660865024,931322574]}},"nextMidPrice":{"numerator":[87634659,971215510,126294],"denominator":[474511765,6],"baseCurrency":{"decimals":2,"symbol":"G$","name":"GoodDollar","chainId":761412,"address":"0x495d133B938596C9984d462F007B676bDc57eCEC"},"quoteCurrency":{"decimals":18,"symbol":"WFUSE","name":"Wrapped Mix","chainId":761412,"address":"0x0BE9e53fd7EDaC9F859882AfdDa116645287C629"},"scalar":{"numerator":[100],"denominator":[660865024,931322574]}},"priceImpact":{"numerator":[692048708,219972572,411550067,245243790],"denominator":[413848800,1032735213,633750127,827571239,75]}}}}},"example-1":{"summary":"Error Response","value":{"error":{"code":1,"message":"Pool is out of liquidity"}}}}}}}},"description":"Get a Quote for a Token Pair","method":"post","path":"/trade/swap/quote","servers":[{"url":"https://api.miexs.com/api/v0"}],"jsonRequestBodyExample":{"currencyIn":"0x495d133B938596C9984d462F007B676bDc57eCEC","currencyOut":"0x0BE9e53fd7EDaC9F859882AfdDa116645287C629","amountIn":"1000"},"info":{"title":"Trade API","version":"1.0.0"},"postman":{"name":"Get a Quote for a Token Pair","description":{"type":"text/plain"},"url":{"path":["trade","swap","quote"],"host":["{{baseUrl}}"],"query":[{"disabled":false,"description":{"content":"(Required) Your Public API key","type":"text/plain"},"key":"apiKey","value":""}],"variable":[]},"header":[{"key":"Content-Type","value":"application/json"},{"key":"Accept","value":"application/json"}],"method":"POST","body":{"mode":"raw","raw":"\"\"","options":{"raw":{"language":"json"}}}}}
-sidebar_class_name: "post api-method"
+api:
+  tags:
+    - Swap
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            currencyIn:
+              type: string
+              example: '0x495d133B938596C9984d462F007B676bDc57eCEC'
+            currencyOut:
+              type: string
+              example: '0x0BE9e53fd7EDaC9F859882AfdDa116645287C629'
+            amountIn:
+              type: string
+              example: '1000'
+          example:
+            currencyIn: '0x495d133B938596C9984d462F007B676bDc57eCEC'
+            currencyOut: '0x0BE9e53fd7EDaC9F859882AfdDa116645287C629'
+            amountIn: '1000'
+  parameters:
+    - name: apiKey
+      in: query
+      schema:
+        type: string
+      description: (Required) Your Public API key
+      example: '{{publicKey}}'
+  responses:
+    '201':
+      description: Created
+      headers:
+        Date:
+          schema:
+            type: string
+            example: 'Thu, 23 Jun 2022 11:36:07 GMT'
+        Content-Type:
+          schema:
+            type: string
+            example: application/json; charset=utf-8
+        Content-Length:
+          schema:
+            type: integer
+            example: '3630'
+        Connection:
+          schema:
+            type: string
+            example: keep-alive
+        X-Powered-By:
+          schema:
+            type: string
+            example: Express
+        ETag:
+          schema:
+            type: string
+            example: W/"e2e-HaQC/0hWJXL2mYdt9hyE4vBnB9M"
+      content:
+        application/json:
+          schema:
+            type: object
+          examples:
+            example-0:
+              summary: Successful Response
+              value:
+                data:
+                  info:
+                    inputAmount: '1000'
+                    outputAmount: '2.0988'
+                    route:
+                      - G$
+                      - WFUSE
+                    inputToken: G$
+                    outputToken: WFUSE
+                    executionPrice: '0.0020988'
+                    nextMidPrice: '0.00210509'
+                    priceImpact: '0.30144'
+                  trade:
+                    route:
+                      pairs:
+                        - liquidityToken:
+                            decimals: 18
+                            symbol: VLP
+                            name: Voltage LP Token
+                            chainId: 761412
+                            address: '0xa02ed9Fe9e3351FE2cd1F588B23973C1542dCbCC'
+                          tokenAmounts:
+                            - numerator:
+                                - 935045727
+                                - 778394003
+                                - 126296
+                              denominator:
+                                - 660865024
+                                - 931322574
+                              currency:
+                                decimals: 18
+                                symbol: WFUSE
+                                name: Wrapped Mix
+                                chainId: 761412
+                                address: '0x0BE9e53fd7EDaC9F859882AfdDa116645287C629'
+                              token:
+                                decimals: 18
+                                symbol: WFUSE
+                                name: Wrapped Mix
+                                chainId: 761412
+                                address: '0x0BE9e53fd7EDaC9F859882AfdDa116645287C629'
+                            - numerator:
+                                - 474411765
+                                - 6
+                              denominator:
+                                - 100
+                              currency:
+                                decimals: 2
+                                symbol: G$
+                                name: GoodDollar
+                                chainId: 761412
+                                address: '0x495d133B938596C9984d462F007B676bDc57eCEC'
+                              token:
+                                decimals: 2
+                                symbol: G$
+                                name: GoodDollar
+                                chainId: 761412
+                                address: '0x495d133B938596C9984d462F007B676bDc57eCEC'
+                      path:
+                        - decimals: 2
+                          symbol: G$
+                          name: GoodDollar
+                          chainId: 761412
+                          address: '0x495d133B938596C9984d462F007B676bDc57eCEC'
+                        - decimals: 18
+                          symbol: WFUSE
+                          name: Wrapped Mix
+                          chainId: 761412
+                          address: '0x0BE9e53fd7EDaC9F859882AfdDa116645287C629'
+                      midPrice:
+                        numerator:
+                          - 935045727
+                          - 778394003
+                          - 126296
+                        denominator:
+                          - 474411765
+                          - 6
+                        baseCurrency:
+                          decimals: 2
+                          symbol: G$
+                          name: GoodDollar
+                          chainId: 761412
+                          address: '0x495d133B938596C9984d462F007B676bDc57eCEC'
+                        quoteCurrency:
+                          decimals: 18
+                          symbol: WFUSE
+                          name: Wrapped Mix
+                          chainId: 761412
+                          address: '0x0BE9e53fd7EDaC9F859882AfdDa116645287C629'
+                        scalar:
+                          numerator:
+                            - 100
+                          denominator:
+                            - 660865024
+                            - 931322574
+                      input:
+                        decimals: 2
+                        symbol: G$
+                        name: GoodDollar
+                        chainId: 761412
+                        address: '0x495d133B938596C9984d462F007B676bDc57eCEC'
+                      output:
+                        decimals: 18
+                        symbol: WFUSE
+                        name: Wrapped Mix
+                        chainId: 761412
+                        address: '0x0BE9e53fd7EDaC9F859882AfdDa116645287C629'
+                    tradeType: 0
+                    inputAmount:
+                      numerator:
+                        - 100000
+                      denominator:
+                        - 100
+                      currency:
+                        decimals: 2
+                        symbol: G$
+                        name: GoodDollar
+                        chainId: 761412
+                        address: '0x495d133B938596C9984d462F007B676bDc57eCEC'
+                      token:
+                        decimals: 2
+                        symbol: G$
+                        name: GoodDollar
+                        chainId: 761412
+                        address: '0x495d133B938596C9984d462F007B676bDc57eCEC'
+                    outputAmount:
+                      numerator:
+                        - 847411068
+                        - 880920317
+                        - 1
+                      denominator:
+                        - 660865024
+                        - 931322574
+                      currency:
+                        decimals: 18
+                        symbol: WFUSE
+                        name: Wrapped Mix
+                        chainId: 761412
+                        address: '0x0BE9e53fd7EDaC9F859882AfdDa116645287C629'
+                      token:
+                        decimals: 18
+                        symbol: WFUSE
+                        name: Wrapped Mix
+                        chainId: 761412
+                        address: '0x0BE9e53fd7EDaC9F859882AfdDa116645287C629'
+                    executionPrice:
+                      numerator:
+                        - 847411068
+                        - 880920317
+                        - 1
+                      denominator:
+                        - 100000
+                      baseCurrency:
+                        decimals: 2
+                        symbol: G$
+                        name: GoodDollar
+                        chainId: 761412
+                        address: '0x495d133B938596C9984d462F007B676bDc57eCEC'
+                      quoteCurrency:
+                        decimals: 18
+                        symbol: WFUSE
+                        name: Wrapped Mix
+                        chainId: 761412
+                        address: '0x0BE9e53fd7EDaC9F859882AfdDa116645287C629'
+                      scalar:
+                        numerator:
+                          - 100
+                        denominator:
+                          - 660865024
+                          - 931322574
+                    nextMidPrice:
+                      numerator:
+                        - 87634659
+                        - 971215510
+                        - 126294
+                      denominator:
+                        - 474511765
+                        - 6
+                      baseCurrency:
+                        decimals: 2
+                        symbol: G$
+                        name: GoodDollar
+                        chainId: 761412
+                        address: '0x495d133B938596C9984d462F007B676bDc57eCEC'
+                      quoteCurrency:
+                        decimals: 18
+                        symbol: WFUSE
+                        name: Wrapped Mix
+                        chainId: 761412
+                        address: '0x0BE9e53fd7EDaC9F859882AfdDa116645287C629'
+                      scalar:
+                        numerator:
+                          - 100
+                        denominator:
+                          - 660865024
+                          - 931322574
+                    priceImpact:
+                      numerator:
+                        - 692048708
+                        - 219972572
+                        - 411550067
+                        - 245243790
+                      denominator:
+                        - 413848800
+                        - 1032735213
+                        - 633750127
+                        - 827571239
+                        - 75
+            example-1:
+              summary: Error Response
+              value:
+                error:
+                  code: 1
+                  message: Pool is out of liquidity
+  description: Get a Quote for a Token Pair
+  method: post
+  path: /trade/swap/quote
+  servers:
+    - url: 'https://api.miexs.com/api/v0'
+  jsonRequestBodyExample:
+    currencyIn: '0x495d133B938596C9984d462F007B676bDc57eCEC'
+    currencyOut: '0x0BE9e53fd7EDaC9F859882AfdDa116645287C629'
+    amountIn: '1000'
+  info:
+    title: Trade API
+    version: 1.0.0
+  postman:
+    name: Get a Quote for a Token Pair
+    description:
+      type: text/plain
+    url:
+      path:
+        - trade
+        - swap
+        - quote
+      host:
+        - '{{baseUrl}}'
+      query:
+        - disabled: false
+          description:
+            content: (Required) Your Public API key
+            type: text/plain
+          key: apiKey
+          value: ''
+      variable: []
+    header:
+      - key: Content-Type
+        value: application/json
+      - key: Accept
+        value: application/json
+    method: POST
+    body:
+      mode: raw
+      raw: '""'
+      options:
+        raw:
+          language: json
+sidebar_class_name: post api-method
 info_path: docs/trade-api/trade-api
 custom_edit_url: null
 ---
+
 
 import ApiTabs from "@theme/ApiTabs";
 import DiscriminatorTabs from "@theme/DiscriminatorTabs";
