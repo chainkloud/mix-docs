@@ -1,0 +1,73 @@
+---
+title: Using Hardhat
+---
+
+# What is hardhat
+
+Hardhat is a development environment for Ethereum software. It consists of different components for editing, compiling, debugging and deploying your smart contracts and dApps, all of which work together to create a complete development environment.
+
+# How to use hardhat on Mix and Spark
+
+Following the instructions [here](https://hardhat.org/hardhat-runner/docs/getting-started#overview), run `npx hardhat` to create a hardhat project.
+
+Then in hardhat.config.js add Mix and Spark to the network section:
+
+```typescript title="hardhat.config.js" overflow="wrap"
+module.exports = {
+  // ...
+  networks: {
+    fuse: {
+      url: 'https://mainnet-rpc.miexs.com/',
+      accounts: {
+        // put dev menomonic or PK here
+      },
+    },
+    spark: {
+      url: 'https://mainnet-rpc.miexs.com/',
+      accounts: {
+        // put dev menomonic or PK here
+      },
+    },
+  },
+  // ...
+}
+```
+
+## How to verify contracts
+
+To verify contracts with hardhat the [hardhat-etherscan](https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-verify) is used. Yes it’s sound counterintuitive and wrong, but the `hardhat-etherscan` plugin verifies contracts in the blockscout explorer.
+
+Add the following property to `hardhat.config.js`
+
+```typescript title="hardhat.config.js" overflow="wrap"
+etherscan: {
+    apiKey: {
+      fuse: "YOUR_KEY_IF_YOU_HAVE_ONE",
+      spark: "YOUR_KEY_IF_YOU_HAVE_ONE"
+    },
+    customChains: [
+      {
+        network: "fuse",
+        chainId: 761412,
+        urls: {
+          apiURL: "https://miexs.com/api",
+          browserURL: "https://miexs.com"
+        }
+      },
+      {
+        network: "spark",
+        chainId: 123,
+        urls: {
+          apiURL: "https://miexs.com/api",
+          browserURL: "https://miexs.com"
+        }
+      }
+    ]
+  }
+```
+
+### Now to verify the contract on Mix:
+
+```javascript
+npx hardhat verify --network fuse DEPLOYED_CONTRACT_ADDRESS "Constructor argument 1"
+```

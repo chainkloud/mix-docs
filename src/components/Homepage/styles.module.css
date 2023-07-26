@@ -1,0 +1,134 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 1545px) {
+  .container {
+    padding: 48px 200px;
+  }
+}
+
+.container h1 {
+  font-weight: bolder !important;
+  font-size: 32px !important;
+  line-height: 32px;
+  font-weight: 900 !important;
+}
+
+.grid {
+  margin-top: 74px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  /* grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  margin-top: 48px; */
+}
+
+.card {
+  min-width: 48%;
+  max-width: 553px;
+  border-radius: 12px;
+  padding: 16px;
+  background-color: #fff;
+  margin: 24px 16px 0 0;
+  height: 284px;
+  transition: all 0.2s ease-in-out;
+}
+.card > div {
+  background-color: #f2f2f2;
+  width: 100%;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0px;
+  justify-content: center;
+  max-height: 125px;
+}
+
+.card h2 {
+  margin-top: 16px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+.card p {
+  width: 100%;
+  font-size: 14px;
+  line-height: 20px;
+  color: #737373;
+}
+.cardArrow {
+  margin-left: 8.5px;
+  max-width: 11px;
+  max-height: 8px;
+}
+.card:hover {
+  box-shadow: 0px 8px 24px rgba(66, 74, 83, 0.12),
+    0px 1px 3px rgba(66, 74, 83, 0.12);
+}
+[data-theme='dark'] .card:hover {
+  box-shadow: 0px 8px 24px rgba(255, 255, 255, 0.12),
+    0px 1px 3px rgba(255, 255, 255, 0.12);
+}
+
+.card:hover > h2 > .cardArrow {
+  margin-left: 18px;
+  transition: all 0.2s linear;
+}
+.card > h2 > .cardArrow {
+  transition: all 0.2s linear;
+}
+/* .card:hover > div > img:nth-child(2) {
+  display: flex;
+}  */
+
+@media screen and (max-width: 1100px) {
+  .grid {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .container {
+    width: 100%;
+    padding: 0 0 40px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .container h1 {
+    font-size: 40px !important;
+    text-align: left;
+  }
+  .container p {
+    margin-top: 10px;
+    text-align: start;
+  }
+
+  .grid {
+    width: 100%;
+    margin-top: 20px;
+    justify-content: center;
+    /* padding-right: 36px; */
+  }
+  .card {
+    /* margin:15px 0 0 0; */
+    width: 100%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .grid {
+    padding-right: 20px;
+  }
+  .card {
+    /* margin:15px 0 0 0; */
+    width: 100%;
+    max-width: 100%;
+  }
+}

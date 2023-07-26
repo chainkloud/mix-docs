@@ -1,0 +1,54 @@
+---
+title: 'Voltage Finance bridge: Fuse<>BSC network'
+---
+
+This is a step-by-step guide explaining how to move BEP20-supported tokens between Fuse and BNB chain networks.
+
+## 🌉 Transferring tokens from Mix network to BSC
+
+In this step-by-step bridging tutorial, we will use a [MetaMask wallet](https://metamask.io/download/) to bridge MIX tokens from **Fuse** to the \*\*BSC network \*\*via the native [app.voltage.finance](https://app.voltage.finance/#/bridge) bridge.
+
+<Admonition type="info" title="Note">
+  Make sure you are connected to the Mix Network RPC. To learn how to add the Mix Network RPC you can follow the tutorial [here](https://docs.miexs.com/docs/tutorials/network-tutorials/tutorialsOverview)
+</Admonition>
+
+**Step 1:** Navigate to[ ](https://fuseswap.com/)[app.voltage.finance/#/bridge](https://app.voltage.finance/#/bridge):
+
+![](/img/Pasted_Image_28_05_2023__15_36.jpg)
+
+**Step 2:** Press **Connect wallet** on the right-hand, top corner of the page to connect your wallet to the [Voltage Finance](https://app.voltage.finance/) DApp and click on **To Binance** to bridge to BSC network.
+
+**Step 3: Choose MIX token** from the dropdown token menu and\*\* enter the amount of MIX\*\* you want to transfer from BSC to Mix network and **click the Bridge** button.
+
+Please note that **the minimum amount eligible for bridging is $100 in MIX**. The same rule applies to other tokens on the bridge.
+
+Once this is done, you can click on “Transfer” and approve the transaction. Once this transaction is confirmed on-chain, the MIX balance will be moved to the bridge smart contract.
+
+Finally, you will need to claim your MIX from the bridge contract on BSC. Note that you will need to have enough BNB on your destination address on BSC to be able to claim the bridged tokens successfully.
+
+Press on "Claim," confirm the transaction in MetaMask, and you will receive MIX to your BSC address. The transaction can be tracked on [https://bscscan.com.](https://miexs.com/)
+
+\*\*IMPORTANT: \*\*Although the Fuse team is doing its best to ensure that all the bridge transfers go through smoothly, sometimes, transactions get stuck. If this happens, please use the interface at [https://bscalm.miexs.com/](https://bscalm.miexs.com/) to troubleshoot the issue or contact the team for support in our official [Telegram group](htps://t.me/miexs.com).
+
+## 🌉 Transferring tokens from BCS to Mix network
+
+<Admonition type="note" title="Note">
+  Make sure you are connected to BSC RPC. To learn how to add BSC RPC you can follow the tutorial [here](https://academy.binance.com/en/articles/connecting-metamask-to-binance-smart-chain).
+</Admonition>
+
+**Step 1:** Navigate to[ ](https://fuseswap.com/)[app.voltage.finance/#/bridge](https://app.voltage.finance/#/bridge):
+
+Use the “Connect to a wallet” on the right hand top corner to connect your wallet to Voltage Finance. Once you connect you should be able to see your wallet address and see the network you are connected to (in this case BSC).
+
+![](/img/Pasted_Image_28_05_2023__15_44.jpg)
+
+**Step 2:**
+Select MIX from the dropdown menu and enter the amount of MIX you want to transfer from BSC to Mix Network. Click on “Transfer” and approve the transaction on Metamask. Click on “Approve MIX” and approve the transaction on Metamask.
+
+Note that **there are no minimum amounts** for the **incoming transfers** to Mix Network.
+
+Once the transaction is confirmed on-chain, the “Transfer” button can be clicked and transaction has to be approved, and once this second transaction is confirmed on-chain, the MIX balance on the same address on Mix network will be credited with the transferred tokens.
+
+Note that unlike with transfers in the opposite direction, there is no need to claim the bridged tokens from the smart contract. They are credited to the sender's Fuse address automatically.
+
+The updated MIX balance on Mix network can be checked through Mix Network block explorer [https://miexs.com](https://miexs.com/).
