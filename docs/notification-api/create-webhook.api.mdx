@@ -1,15 +1,122 @@
 ---
 id: create-webhook
-title: "Create Webhook"
-description: "Create a webhook associated with a Charge project"
-sidebar_label: "Create Webhook"
+title: Create Webhook
+description: Create a webhook associated with a Charge project
+sidebar_label: Create Webhook
 hide_title: true
 hide_table_of_contents: true
-api: {"tags":["Webhooks"],"description":"Create a webhook associated with a Charge project","requestBody":{"content":{"application/json":{"schema":{"type":"object","properties":{"projectId":{"type":"string","example":"62ce87c8131bbffe0f83af65"},"webhookUrl":{"type":"string","example":"https://webhook.site/d7a716ac-8119-4114-9586-f0667c2cb1e1"},"eventType":{"type":"string","example":"ALL"}},"example":{"projectId":"62caedf9e2719e72815d0703","webhookUrl":"https://webhook.site/d7a716ac-8119-4114-9586-f0667c2cb1e1","eventType":"ALL"}}}}},"parameters":[{"name":"API-SECRET","in":"header","schema":{"type":"string"},"example":"{{secretKey}}"},{"name":"apiKey","in":"query","schema":{"type":"string"},"example":"{{publicKey}}"}],"responses":{"201":{"description":"Created","content":{"application/json":{"schema":{"type":"object"},"example":{"projectId":"62ce87c8131bbffe0f83af65","webhookUrl":"https://webhook.site/d7a716ac-8119-4114-9586-f0667c2cb1e1","eventType":"ALL","_id":"62d3f2aa15a8393bd802c313","createdAt":"2022-07-17T11:29:46.459Z","updatedAt":"2022-07-17T11:29:46.459Z","__v":0}}}},"403":{"description":"Forbidden","content":{"application/json":{"schema":{"type":"object"},"example":{"statusCode":403,"errorMessage":{"statusCode":403,"message":"Forbidden resource","error":"Forbidden"},"path":"/api/v0/notifications/webhook?apiKey=pk_fPI_B8UbTnpPmH5UgQl2E7VI"}}}}},"method":"post","path":"/notifications/webhook","servers":[{"url":"https://api.miexs.com/api/v0"}],"jsonRequestBodyExample":{"projectId":"62caedf9e2719e72815d0703","webhookUrl":"https://webhook.site/d7a716ac-8119-4114-9586-f0667c2cb1e1","eventType":"ALL"},"info":{"title":"Notifications API","version":"1.0.0"},"postman":{"name":"Create Webhook","description":{"content":"Create a webhook associated with a Charge project","type":"text/plain"},"url":{"path":["notifications","webhook"],"host":["{{baseUrl}}"],"query":[{"disabled":false,"key":"apiKey","value":""}],"variable":[]},"header":[{"disabled":false,"description":{"content":"","type":"text/plain"},"key":"API-SECRET","value":""},{"key":"Content-Type","value":"application/json"},{"key":"Accept","value":"application/json"}],"method":"POST","body":{"mode":"raw","raw":"\"\"","options":{"raw":{"language":"json"}}}}}
-sidebar_class_name: "post api-method"
+api:
+  tags:
+    - Webhooks
+  description: Create a webhook associated with a Charge project
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            projectId:
+              type: string
+              example: 62ce87c8131bbffe0f83af65
+            webhookUrl:
+              type: string
+              example: 'https://webhook.site/d7a716ac-8119-4114-9586-f0667c2cb1e1'
+            eventType:
+              type: string
+              example: ALL
+          example:
+            projectId: 62caedf9e2719e72815d0703
+            webhookUrl: 'https://webhook.site/d7a716ac-8119-4114-9586-f0667c2cb1e1'
+            eventType: ALL
+  parameters:
+    - name: API-SECRET
+      in: header
+      schema:
+        type: string
+      example: '{{secretKey}}'
+    - name: apiKey
+      in: query
+      schema:
+        type: string
+      example: '{{publicKey}}'
+  responses:
+    '201':
+      description: Created
+      content:
+        application/json:
+          schema:
+            type: object
+          example:
+            projectId: 62ce87c8131bbffe0f83af65
+            webhookUrl: 'https://webhook.site/d7a716ac-8119-4114-9586-f0667c2cb1e1'
+            eventType: ALL
+            _id: 62d3f2aa15a8393bd802c313
+            createdAt: '2022-07-17T11:29:46.459Z'
+            updatedAt: '2022-07-17T11:29:46.459Z'
+            __v: 0
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            type: object
+          example:
+            statusCode: 403
+            errorMessage:
+              statusCode: 403
+              message: Forbidden resource
+              error: Forbidden
+            path: /api/v0/notifications/webhook?apiKey=pk_fPI_B8UbTnpPmH5UgQl2E7VI
+  method: post
+  path: /notifications/webhook
+  servers:
+    - url: 'https://api.miexs.com/api/v0'
+  jsonRequestBodyExample:
+    projectId: 62caedf9e2719e72815d0703
+    webhookUrl: 'https://webhook.site/d7a716ac-8119-4114-9586-f0667c2cb1e1'
+    eventType: ALL
+  info:
+    title: Notifications API
+    version: 1.0.0
+  postman:
+    name: Create Webhook
+    description:
+      content: Create a webhook associated with a Charge project
+      type: text/plain
+    url:
+      path:
+        - notifications
+        - webhook
+      host:
+        - '{{baseUrl}}'
+      query:
+        - disabled: false
+          key: apiKey
+          value: ''
+      variable: []
+    header:
+      - disabled: false
+        description:
+          content: ''
+          type: text/plain
+        key: API-SECRET
+        value: ''
+      - key: Content-Type
+        value: application/json
+      - key: Accept
+        value: application/json
+    method: POST
+    body:
+      mode: raw
+      raw: '""'
+      options:
+        raw:
+          language: json
+sidebar_class_name: post api-method
 info_path: docs/notification-api/notifications-api
 custom_edit_url: null
 ---
+
 
 import ApiTabs from "@theme/ApiTabs";
 import DiscriminatorTabs from "@theme/DiscriminatorTabs";
