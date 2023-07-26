@@ -1,15 +1,161 @@
 ---
 id: burn-an-erc-20-token
-title: "Burn an ERC20 token"
-description: "Burns an ERC20 token - Token must be owned by project's backend account"
-sidebar_label: "Burn an ERC20 token"
+title: Burn an ERC20 token
+description: Burns an ERC20 token - Token must be owned by project's backend account
+sidebar_label: Burn an ERC20 token
 hide_title: true
 hide_table_of_contents: true
-api: {"tags":["Tokens"],"description":"Burns an ERC20 token - Token must be owned by project's backend account","requestBody":{"content":{"application/json":{"schema":{"type":"object","properties":{"tokenAddress":{"type":"string","example":"0xaf03155DF641f77917803C634E9e4d808ea42ae4"},"amount":{"type":"string","example":"10"},"from":{"type":"string","example":"0xBE06B7DF117dc1D6cD63aa133d6f4dfa614ed87C"}},"example":{"tokenAddress":"0x6F353A3A737bF3f6442BEc6246411E513285882E","amount":"500","from":"0xdBDe387a58bbba6cFA352DFE0d77B3003Dc044bB"}}}}},"parameters":[{"name":"API-SECRET","in":"header","schema":{"type":"string"},"description":"(Required) Your Secret API key","example":"{{secretKey}}"},{"name":"Content-Type","in":"header","schema":{"type":"string"},"example":"application/json"},{"name":"Accept","in":"header","schema":{"type":"string"},"example":"application/json"},{"name":"apiKey","in":"query","schema":{"type":"string"},"description":"(Required) You Public API key","example":"{{publicKey}}"}],"responses":{"201":{"description":"Created","content":{"application/json":{"schema":{"type":"object"},"example":{"job":{"status":"pending","_id":"62b196528c261600149439f7","name":"adminApprove","data":{"tokenAddress":"0xD5BB30E6BBc3409AD934111C419b04c3874d3059","bridgeType":"home","accountAddress":"0xbC3bA1ae0a4Cf6269F79d0D30767C60cB58D7Ff2","amount":"10000000000000000000","wallet":"0xe3c7034E90FF8548773FfdCD6897761D2742cD0d","spender":"0xbC3bA1ae0a4Cf6269F79d0D30767C60cB58D7Ff2","burnFromAddress":"0xe3c7034E90FF8548773FfdCD6897761D2742cD0d","correlationId":"1001-1"},"createdAt":"2022-06-21T09:58:42.238Z","updatedAt":"2022-06-21T09:58:42.238Z","__v":0}}}}},"400":{"description":"Bad Request","content":{"application/json":{"schema":{"type":"object"},"example":{"statusCode":400,"message":"Bad Request"}}}},"401":{"description":"Unauthorized","content":{"text/plain":{"schema":{"type":"string"},"example":""}}},"403":{"description":"Forbidden","content":{"text/plain":{"schema":{"type":"string"},"example":""}}}},"method":"post","path":"/admin/tokens/burn","servers":[{"url":"https://api.miexs.com/api/v0"}],"jsonRequestBodyExample":{"tokenAddress":"0x6F353A3A737bF3f6442BEc6246411E513285882E","amount":"500","from":"0xdBDe387a58bbba6cFA352DFE0d77B3003Dc044bB"},"info":{"title":"Admin API","description":"With Mix Admin API you can create and manage custodial wallets for your users to offer a Web2-like experience, as well as create, mint, and burn tokens for your economies/communities.","version":"1.0.0"},"postman":{"name":"Burn an ERC20 token","description":{"content":"Burns an ERC20 token - Token must be owned by project's backend account","type":"text/plain"},"url":{"path":["admin","tokens","burn"],"host":["{{baseUrl}}"],"query":[{"disabled":false,"description":{"content":"(Required) You Public API key","type":"text/plain"},"key":"apiKey","value":""}],"variable":[]},"header":[{"disabled":false,"description":{"content":"(Required) Your Secret API key","type":"text/plain"},"key":"API-SECRET","value":""},{"key":"Content-Type","value":"application/json"},{"key":"Accept","value":"application/json"}],"method":"POST","body":{"mode":"raw","raw":"\"\"","options":{"raw":{"language":"json"}}}}}
-sidebar_class_name: "post api-method"
+api:
+  tags:
+    - Tokens
+  description: Burns an ERC20 token - Token must be owned by project's backend account
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            tokenAddress:
+              type: string
+              example: '0xaf03155DF641f77917803C634E9e4d808ea42ae4'
+            amount:
+              type: string
+              example: '10'
+            from:
+              type: string
+              example: '0xBE06B7DF117dc1D6cD63aa133d6f4dfa614ed87C'
+          example:
+            tokenAddress: '0x6F353A3A737bF3f6442BEc6246411E513285882E'
+            amount: '500'
+            from: '0xdBDe387a58bbba6cFA352DFE0d77B3003Dc044bB'
+  parameters:
+    - name: API-SECRET
+      in: header
+      schema:
+        type: string
+      description: (Required) Your Secret API key
+      example: '{{secretKey}}'
+    - name: Content-Type
+      in: header
+      schema:
+        type: string
+      example: application/json
+    - name: Accept
+      in: header
+      schema:
+        type: string
+      example: application/json
+    - name: apiKey
+      in: query
+      schema:
+        type: string
+      description: (Required) You Public API key
+      example: '{{publicKey}}'
+  responses:
+    '201':
+      description: Created
+      content:
+        application/json:
+          schema:
+            type: object
+          example:
+            job:
+              status: pending
+              _id: 62b196528c261600149439f7
+              name: adminApprove
+              data:
+                tokenAddress: '0xD5BB30E6BBc3409AD934111C419b04c3874d3059'
+                bridgeType: home
+                accountAddress: '0xbC3bA1ae0a4Cf6269F79d0D30767C60cB58D7Ff2'
+                amount: '10000000000000000000'
+                wallet: '0xe3c7034E90FF8548773FfdCD6897761D2742cD0d'
+                spender: '0xbC3bA1ae0a4Cf6269F79d0D30767C60cB58D7Ff2'
+                burnFromAddress: '0xe3c7034E90FF8548773FfdCD6897761D2742cD0d'
+                correlationId: 1001-1
+              createdAt: '2022-06-21T09:58:42.238Z'
+              updatedAt: '2022-06-21T09:58:42.238Z'
+              __v: 0
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            type: object
+          example:
+            statusCode: 400
+            message: Bad Request
+    '401':
+      description: Unauthorized
+      content:
+        text/plain:
+          schema:
+            type: string
+          example: ''
+    '403':
+      description: Forbidden
+      content:
+        text/plain:
+          schema:
+            type: string
+          example: ''
+  method: post
+  path: /admin/tokens/burn
+  servers:
+    - url: 'https://api.miexs.com/api/v0'
+  jsonRequestBodyExample:
+    tokenAddress: '0x6F353A3A737bF3f6442BEc6246411E513285882E'
+    amount: '500'
+    from: '0xdBDe387a58bbba6cFA352DFE0d77B3003Dc044bB'
+  info:
+    title: Admin API
+    description: >-
+      With Mix Admin API you can create and manage custodial wallets for your
+      users to offer a Web2-like experience, as well as create, mint, and burn
+      tokens for your economies/communities.
+    version: 1.0.0
+  postman:
+    name: Burn an ERC20 token
+    description:
+      content: Burns an ERC20 token - Token must be owned by project's backend account
+      type: text/plain
+    url:
+      path:
+        - admin
+        - tokens
+        - burn
+      host:
+        - '{{baseUrl}}'
+      query:
+        - disabled: false
+          description:
+            content: (Required) You Public API key
+            type: text/plain
+          key: apiKey
+          value: ''
+      variable: []
+    header:
+      - disabled: false
+        description:
+          content: (Required) Your Secret API key
+          type: text/plain
+        key: API-SECRET
+        value: ''
+      - key: Content-Type
+        value: application/json
+      - key: Accept
+        value: application/json
+    method: POST
+    body:
+      mode: raw
+      raw: '""'
+      options:
+        raw:
+          language: json
+sidebar_class_name: post api-method
 info_path: docs/admin-api/admin-api
 custom_edit_url: null
 ---
+
 
 import ApiTabs from "@theme/ApiTabs";
 import DiscriminatorTabs from "@theme/DiscriminatorTabs";
