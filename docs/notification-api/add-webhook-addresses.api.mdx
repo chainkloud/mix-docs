@@ -1,15 +1,147 @@
 ---
 id: add-webhook-addresses
-title: "Add Webhook Addresses"
-description: "Add new addresses to a webhook"
-sidebar_label: "Add Webhook Addresses"
+title: Add Webhook Addresses
+description: Add new addresses to a webhook
+sidebar_label: Add Webhook Addresses
 hide_title: true
 hide_table_of_contents: true
-api: {"tags":["Webhooks"],"description":"Add new addresses to a webhook","requestBody":{"content":{"application/json":{"schema":{"type":"object","properties":{"webhookId":{"type":"string","example":"62d3f2aa15a8393bd802c313"},"addresses":{"type":"array","items":{"type":"string"}}},"example":{"webhookId":"62da85e69b1568215223a9dd","addresses":["0x14E138F31b38847Fd7E3462fFfae6b6F91867Fc2","0x14E138F31b38847Fd7E3462fFfae6b6F91867Fc3","0x285029e7a50F9e2d9dAa4e1BFd2e5573fa3D3DCF"]}}}}},"parameters":[{"name":"API-SECRET","in":"header","schema":{"type":"string"},"example":"{{secretKey}}"},{"name":"apiKey","in":"query","schema":{"type":"string"},"example":"{{publicKey}}"}],"responses":{"201":{"description":"Created","content":{"application/json":{"schema":{"type":"object"},"example":[{"webhookId":"62d3f2aa15a8393bd802c313","address":"0xcc95E80DA76bd41507b99d9b977Dc3062bcf6430","_id":"62d3f32415a8393bd802c31b","__v":0,"createdAt":"2022-07-17T11:31:48.413Z","updatedAt":"2022-07-17T11:31:48.413Z"},{"webhookId":"62d3f2aa15a8393bd802c313","address":"0x14E138F31b38847Fd7E3462fFfae6b6F91867Fc2","_id":"62d3f32415a8393bd802c31c","__v":0,"createdAt":"2022-07-17T11:31:48.413Z","updatedAt":"2022-07-17T11:31:48.413Z"},{"webhookId":"62d3f2aa15a8393bd802c313","address":"0x14E138F31b38847Fd7E3462fFfae6b6F91867Fc3","_id":"62d3f32415a8393bd802c31e","__v":0,"createdAt":"2022-07-17T11:31:48.414Z","updatedAt":"2022-07-17T11:31:48.414Z"},{"webhookId":"62d3f2aa15a8393bd802c313","address":"0x285029e7a50F9e2d9dAa4e1BFd2e5573fa3D3DCF","_id":"62d3f32415a8393bd802c31f","__v":0,"createdAt":"2022-07-17T11:31:48.414Z","updatedAt":"2022-07-17T11:31:48.414Z"},{"webhookId":"62d3f2aa15a8393bd802c313","address":"0x7A3B4B45D9efFFa2629Ad07288Ee3FD0Ed161A30","_id":"62d3f32415a8393bd802c320","__v":0,"createdAt":"2022-07-17T11:31:48.414Z","updatedAt":"2022-07-17T11:31:48.414Z"},{"webhookId":"62d3f2aa15a8393bd802c313","address":"0x44fcF21eff7B4EEa363cc5235a4715a42B4C28FD","_id":"62d3f32415a8393bd802c321","__v":0,"createdAt":"2022-07-17T11:31:48.414Z","updatedAt":"2022-07-17T11:31:48.414Z"},{"webhookId":"62d3f2aa15a8393bd802c313","address":"0x245C4eDa9E358A8cE83CBEDFB2b516dc80A07534","_id":"62d3f32415a8393bd802c322","__v":0,"createdAt":"2022-07-17T11:31:48.415Z","updatedAt":"2022-07-17T11:31:48.415Z"}]}}}},"method":"post","path":"/notifications/webhook/add-addresses","servers":[{"url":"https://api.miexs.com/api/v0"}],"jsonRequestBodyExample":{"webhookId":"62da85e69b1568215223a9dd","addresses":["0x14E138F31b38847Fd7E3462fFfae6b6F91867Fc2","0x14E138F31b38847Fd7E3462fFfae6b6F91867Fc3","0x285029e7a50F9e2d9dAa4e1BFd2e5573fa3D3DCF"]},"info":{"title":"Notifications API","version":"1.0.0"},"postman":{"name":"Add Webhook Addresses","description":{"content":"Add new addresses to a webhook","type":"text/plain"},"url":{"path":["notifications","webhook","add-addresses"],"host":["{{baseUrl}}"],"query":[{"disabled":false,"key":"apiKey","value":""}],"variable":[]},"header":[{"disabled":false,"description":{"content":"","type":"text/plain"},"key":"API-SECRET","value":""},{"key":"Content-Type","value":"application/json"},{"key":"Accept","value":"application/json"}],"method":"POST","body":{"mode":"raw","raw":"\"\"","options":{"raw":{"language":"json"}}}}}
-sidebar_class_name: "post api-method"
+api:
+  tags:
+    - Webhooks
+  description: Add new addresses to a webhook
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            webhookId:
+              type: string
+              example: 62d3f2aa15a8393bd802c313
+            addresses:
+              type: array
+              items:
+                type: string
+          example:
+            webhookId: 62da85e69b1568215223a9dd
+            addresses:
+              - '0x14E138F31b38847Fd7E3462fFfae6b6F91867Fc2'
+              - '0x14E138F31b38847Fd7E3462fFfae6b6F91867Fc3'
+              - '0x285029e7a50F9e2d9dAa4e1BFd2e5573fa3D3DCF'
+  parameters:
+    - name: API-SECRET
+      in: header
+      schema:
+        type: string
+      example: '{{secretKey}}'
+    - name: apiKey
+      in: query
+      schema:
+        type: string
+      example: '{{publicKey}}'
+  responses:
+    '201':
+      description: Created
+      content:
+        application/json:
+          schema:
+            type: object
+          example:
+            - webhookId: 62d3f2aa15a8393bd802c313
+              address: '0xcc95E80DA76bd41507b99d9b977Dc3062bcf6430'
+              _id: 62d3f32415a8393bd802c31b
+              __v: 0
+              createdAt: '2022-07-17T11:31:48.413Z'
+              updatedAt: '2022-07-17T11:31:48.413Z'
+            - webhookId: 62d3f2aa15a8393bd802c313
+              address: '0x14E138F31b38847Fd7E3462fFfae6b6F91867Fc2'
+              _id: 62d3f32415a8393bd802c31c
+              __v: 0
+              createdAt: '2022-07-17T11:31:48.413Z'
+              updatedAt: '2022-07-17T11:31:48.413Z'
+            - webhookId: 62d3f2aa15a8393bd802c313
+              address: '0x14E138F31b38847Fd7E3462fFfae6b6F91867Fc3'
+              _id: 62d3f32415a8393bd802c31e
+              __v: 0
+              createdAt: '2022-07-17T11:31:48.414Z'
+              updatedAt: '2022-07-17T11:31:48.414Z'
+            - webhookId: 62d3f2aa15a8393bd802c313
+              address: '0x285029e7a50F9e2d9dAa4e1BFd2e5573fa3D3DCF'
+              _id: 62d3f32415a8393bd802c31f
+              __v: 0
+              createdAt: '2022-07-17T11:31:48.414Z'
+              updatedAt: '2022-07-17T11:31:48.414Z'
+            - webhookId: 62d3f2aa15a8393bd802c313
+              address: '0x7A3B4B45D9efFFa2629Ad07288Ee3FD0Ed161A30'
+              _id: 62d3f32415a8393bd802c320
+              __v: 0
+              createdAt: '2022-07-17T11:31:48.414Z'
+              updatedAt: '2022-07-17T11:31:48.414Z'
+            - webhookId: 62d3f2aa15a8393bd802c313
+              address: '0x44fcF21eff7B4EEa363cc5235a4715a42B4C28FD'
+              _id: 62d3f32415a8393bd802c321
+              __v: 0
+              createdAt: '2022-07-17T11:31:48.414Z'
+              updatedAt: '2022-07-17T11:31:48.414Z'
+            - webhookId: 62d3f2aa15a8393bd802c313
+              address: '0x245C4eDa9E358A8cE83CBEDFB2b516dc80A07534'
+              _id: 62d3f32415a8393bd802c322
+              __v: 0
+              createdAt: '2022-07-17T11:31:48.415Z'
+              updatedAt: '2022-07-17T11:31:48.415Z'
+  method: post
+  path: /notifications/webhook/add-addresses
+  servers:
+    - url: 'https://api.miexs.com/api/v0'
+  jsonRequestBodyExample:
+    webhookId: 62da85e69b1568215223a9dd
+    addresses:
+      - '0x14E138F31b38847Fd7E3462fFfae6b6F91867Fc2'
+      - '0x14E138F31b38847Fd7E3462fFfae6b6F91867Fc3'
+      - '0x285029e7a50F9e2d9dAa4e1BFd2e5573fa3D3DCF'
+  info:
+    title: Notifications API
+    version: 1.0.0
+  postman:
+    name: Add Webhook Addresses
+    description:
+      content: Add new addresses to a webhook
+      type: text/plain
+    url:
+      path:
+        - notifications
+        - webhook
+        - add-addresses
+      host:
+        - '{{baseUrl}}'
+      query:
+        - disabled: false
+          key: apiKey
+          value: ''
+      variable: []
+    header:
+      - disabled: false
+        description:
+          content: ''
+          type: text/plain
+        key: API-SECRET
+        value: ''
+      - key: Content-Type
+        value: application/json
+      - key: Accept
+        value: application/json
+    method: POST
+    body:
+      mode: raw
+      raw: '""'
+      options:
+        raw:
+          language: json
+sidebar_class_name: post api-method
 info_path: docs/notification-api/notifications-api
 custom_edit_url: null
 ---
+
 
 import ApiTabs from "@theme/ApiTabs";
 import DiscriminatorTabs from "@theme/DiscriminatorTabs";
