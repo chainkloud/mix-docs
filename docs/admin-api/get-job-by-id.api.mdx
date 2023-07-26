@@ -1,15 +1,243 @@
 ---
 id: get-job-by-id
-title: "Get Job by Id"
-description: "Check the status of a job you created by jobId"
-sidebar_label: "Get Job by Id"
+title: Get Job by Id
+description: Check the status of a job you created by jobId
+sidebar_label: Get Job by Id
 hide_title: true
 hide_table_of_contents: true
-api: {"tags":["Jobs API"],"description":"Check the status of a job you created by jobId","parameters":[{"name":"API-SECRET","in":"header","schema":{"type":"string"},"description":"(Required) You Secret API key","example":"{{secretKey}}"},{"name":"apiKey","in":"query","schema":{"type":"string"},"description":"(Required) Your Public API key","example":"{{publicKey}}"},{"name":"jobId","in":"path","schema":{"type":"string"},"required":true,"description":"(Required) The Id of the created job","example":"62f2ce42398a1f0013150fcc"}],"responses":{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object"},"examples":{"example-0":{"summary":"Suuccessful Token Creation","value":{"data":{"status":"succeeded","_id":"62b175498c261600149409e1","name":"createToken","data":{"bridgeType":"home","accountAddress":"0xbC3bA1ae0a4Cf6269F79d0D30767C60cB58D7Ff2","name":"FuseDemo","symbol":"CDM","initialSupplyInWei":"0","tokenURI":"","expiryTimestamp":1939300629,"spendabilityIdsArr":["a","b","c"],"txHash":"0xecd8e61c372d15b0aa22fda14b101360947fa3f453f216f9db9506d39baaedfd","transactionBody":{"status":"confirmed","blockNumber":17670273},"txFee":{"$numberDecimal":"1530530000000000"},"blockNumber":17670273,"tokenAddress":"0xaf03155DF641f77917803C634E9e4d808ea42ae4"},"createdAt":"2022-06-21T07:37:45.626Z","updatedAt":"2022-06-21T07:37:50.885Z","__v":0,"accountAddress":"0xbC3bA1ae0a4Cf6269F79d0D30767C60cB58D7Ff2","lastFinishedAt":"2022-06-21T07:37:50.883Z"}}},"example-1":{"summary":"Successful Token Mint","value":{"data":{"status":"succeeded","_id":"62b17abc8c26160014940e87","name":"mint","data":{"tokenAddress":"0xaf03155DF641f77917803C634E9e4d808ea42ae4","bridgeType":"home","accountAddress":"0xbC3bA1ae0a4Cf6269F79d0D30767C60cB58D7Ff2","amount":"1000000000000000000000","toAddress":"0xBE06B7DF117dc1D6cD63aa133d6f4dfa614ed87C","txHash":"0xc91c941fcfe58a3199b8836e129f1abc43a79c0235cfdb01f79ec01f3445a7b2","transactionBody":{"status":"confirmed","blockNumber":17670548},"txFee":{"$numberDecimal":"70821000000000"}},"createdAt":"2022-06-21T08:01:00.524Z","updatedAt":"2022-06-21T08:01:05.699Z","__v":0,"accountAddress":"0xbC3bA1ae0a4Cf6269F79d0D30767C60cB58D7Ff2","lastFinishedAt":"2022-06-21T08:01:05.698Z"}}},"example-2":{"summary":"Successful Token Transfer","value":{"data":{"status":"succeeded","_id":"62b1806f8c26160014941777","name":"adminTransfer","data":{"tokenAddress":"0xaf03155DF641f77917803C634E9e4d808ea42ae4","bridgeType":"home","accountAddress":"0xbC3bA1ae0a4Cf6269F79d0D30767C60cB58D7Ff2","amount":"10000000000000000000","wallet":"0xBE06B7DF117dc1D6cD63aa133d6f4dfa614ed87C","to":"0x3720D50beba9FDcbAf393bd59Bed91bEdd430F9F","txHash":"0x307326fe73ebb225ddfec295e6eabb27a8d40d099fc4c9447fe0f4cd2ef72448","transactionBody":{"status":"confirmed","blockNumber":17670834},"txFee":{"$numberDecimal":"111490000000000"}},"createdAt":"2022-06-21T08:25:19.066Z","updatedAt":"2022-06-21T08:25:21.300Z","__v":0,"accountAddress":"0xbC3bA1ae0a4Cf6269F79d0D30767C60cB58D7Ff2","lastFinishedAt":"2022-06-21T08:25:21.300Z"}}},"example-3":{"summary":"Successful Token Burn","value":{"data":{"status":"succeeded","_id":"62b197348c26160014943a14","name":"adminApprove","data":{"tokenAddress":"0xaf03155DF641f77917803C634E9e4d808ea42ae4","bridgeType":"home","accountAddress":"0xbC3bA1ae0a4Cf6269F79d0D30767C60cB58D7Ff2","amount":"10000000000000000000","wallet":"0xBE06B7DF117dc1D6cD63aa133d6f4dfa614ed87C","spender":"0xbC3bA1ae0a4Cf6269F79d0D30767C60cB58D7Ff2","burnFromAddress":"0xBE06B7DF117dc1D6cD63aa133d6f4dfa614ed87C","correlationId":"1003-1","approveToken":{"txHash":"0x2b01070ec0e6d12f4c2512b8b82675dd43b3160f32a47d232c098beac7a1275c","transactionBody":{"status":"confirmed","blockNumber":17671980},"txFee":{"$numberDecimal":"105352000000000"}},"txFee":{"$numberDecimal":"132193000000000"},"burnFrom":{"txHash":"0x4b26fba71aabe8f5f13a5e9187c78ca43060d4cc6ab1cf4553b866c4e0cdcd58","transactionBody":{"status":"confirmed","blockNumber":17671981},"txFee":{"$numberDecimal":"26841000000000"}}},"createdAt":"2022-06-21T10:02:28.198Z","updatedAt":"2022-06-21T10:02:35.493Z","__v":0,"accountAddress":"0xbC3bA1ae0a4Cf6269F79d0D30767C60cB58D7Ff2","lastFinishedAt":"2022-06-21T10:02:35.492Z"}}},"example-4":{"summary":"Successful Wallet Creation","value":{"data":{"status":"succeeded","_id":"62b179ee8c26160014940e7f","name":"createWallet","data":{"owner":"0xbC3bA1ae0a4Cf6269F79d0D30767C60cB58D7Ff2","phoneNumber":"+972777777777","_id":"62b179ee8c26160014940e7d","salt":"0xed097dfc637a8e5b3ab141691c2477fbb456deff41d51537a41d8b2be067c966","txHash":"0x9dfe4e7ee54d75b3eaa058b0735f0ff10dcf40989f878c20be1a9f395f3e6eee","transactionBody":{"status":"confirmed","blockNumber":17670507},"txFee":{"$numberDecimal":"554842000000000"},"walletAddress":"0xBE06B7DF117dc1D6cD63aa133d6f4dfa614ed87C"},"createdAt":"2022-06-21T07:57:34.503Z","updatedAt":"2022-06-21T07:58:40.875Z","__v":0,"accountAddress":"0xaeBDf18Dc2f383704d60FB16e359A375A1212cE8","lastFinishedAt":"2022-06-21T07:58:40.873Z"}}}}}}}},"method":"get","path":"/jobs/{jobId}","servers":[{"url":"https://api.miexs.com/api/v0"}],"info":{"title":"Admin API","description":"With Fuse Admin API you can create and manage custodial wallets for your users to offer a Web2-like experience, as well as create, mint, and burn tokens for your economies/communities.","version":"1.0.0"},"postman":{"name":"Get Job by Id","description":{"content":"Check the status of a job you created by jobId","type":"text/plain"},"url":{"path":["jobs",":jobId"],"host":["{{baseUrl}}"],"query":[{"disabled":false,"description":{"content":"(Required) Your Public API key","type":"text/plain"},"key":"apiKey","value":""}],"variable":[{"disabled":false,"description":{"content":"(Required) (Required) The Id of the created job","type":"text/plain"},"type":"any","value":"","key":"jobId"}]},"header":[{"disabled":false,"description":{"content":"(Required) You Secret API key","type":"text/plain"},"key":"API-SECRET","value":""},{"key":"Accept","value":"application/json"}],"method":"GET"}}
-sidebar_class_name: "get api-method"
+api:
+  tags:
+    - Jobs API
+  description: Check the status of a job you created by jobId
+  parameters:
+    - name: API-SECRET
+      in: header
+      schema:
+        type: string
+      description: (Required) You Secret API key
+      example: '{{secretKey}}'
+    - name: apiKey
+      in: query
+      schema:
+        type: string
+      description: (Required) Your Public API key
+      example: '{{publicKey}}'
+    - name: jobId
+      in: path
+      schema:
+        type: string
+      required: true
+      description: (Required) The Id of the created job
+      example: 62f2ce42398a1f0013150fcc
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+          examples:
+            example-0:
+              summary: Suuccessful Token Creation
+              value:
+                data:
+                  status: succeeded
+                  _id: 62b175498c261600149409e1
+                  name: createToken
+                  data:
+                    bridgeType: home
+                    accountAddress: '0xbC3bA1ae0a4Cf6269F79d0D30767C60cB58D7Ff2'
+                    name: FuseDemo
+                    symbol: CDM
+                    initialSupplyInWei: '0'
+                    tokenURI: ''
+                    expiryTimestamp: 1939300629
+                    spendabilityIdsArr:
+                      - a
+                      - b
+                      - c
+                    txHash: >-
+                      0xecd8e61c372d15b0aa22fda14b101360947fa3f453f216f9db9506d39baaedfd
+                    transactionBody:
+                      status: confirmed
+                      blockNumber: 17670273
+                    txFee:
+                      $numberDecimal: '1530530000000000'
+                    blockNumber: 17670273
+                    tokenAddress: '0xaf03155DF641f77917803C634E9e4d808ea42ae4'
+                  createdAt: '2022-06-21T07:37:45.626Z'
+                  updatedAt: '2022-06-21T07:37:50.885Z'
+                  __v: 0
+                  accountAddress: '0xbC3bA1ae0a4Cf6269F79d0D30767C60cB58D7Ff2'
+                  lastFinishedAt: '2022-06-21T07:37:50.883Z'
+            example-1:
+              summary: Successful Token Mint
+              value:
+                data:
+                  status: succeeded
+                  _id: 62b17abc8c26160014940e87
+                  name: mint
+                  data:
+                    tokenAddress: '0xaf03155DF641f77917803C634E9e4d808ea42ae4'
+                    bridgeType: home
+                    accountAddress: '0xbC3bA1ae0a4Cf6269F79d0D30767C60cB58D7Ff2'
+                    amount: '1000000000000000000000'
+                    toAddress: '0xBE06B7DF117dc1D6cD63aa133d6f4dfa614ed87C'
+                    txHash: >-
+                      0xc91c941fcfe58a3199b8836e129f1abc43a79c0235cfdb01f79ec01f3445a7b2
+                    transactionBody:
+                      status: confirmed
+                      blockNumber: 17670548
+                    txFee:
+                      $numberDecimal: '70821000000000'
+                  createdAt: '2022-06-21T08:01:00.524Z'
+                  updatedAt: '2022-06-21T08:01:05.699Z'
+                  __v: 0
+                  accountAddress: '0xbC3bA1ae0a4Cf6269F79d0D30767C60cB58D7Ff2'
+                  lastFinishedAt: '2022-06-21T08:01:05.698Z'
+            example-2:
+              summary: Successful Token Transfer
+              value:
+                data:
+                  status: succeeded
+                  _id: 62b1806f8c26160014941777
+                  name: adminTransfer
+                  data:
+                    tokenAddress: '0xaf03155DF641f77917803C634E9e4d808ea42ae4'
+                    bridgeType: home
+                    accountAddress: '0xbC3bA1ae0a4Cf6269F79d0D30767C60cB58D7Ff2'
+                    amount: '10000000000000000000'
+                    wallet: '0xBE06B7DF117dc1D6cD63aa133d6f4dfa614ed87C'
+                    to: '0x3720D50beba9FDcbAf393bd59Bed91bEdd430F9F'
+                    txHash: >-
+                      0x307326fe73ebb225ddfec295e6eabb27a8d40d099fc4c9447fe0f4cd2ef72448
+                    transactionBody:
+                      status: confirmed
+                      blockNumber: 17670834
+                    txFee:
+                      $numberDecimal: '111490000000000'
+                  createdAt: '2022-06-21T08:25:19.066Z'
+                  updatedAt: '2022-06-21T08:25:21.300Z'
+                  __v: 0
+                  accountAddress: '0xbC3bA1ae0a4Cf6269F79d0D30767C60cB58D7Ff2'
+                  lastFinishedAt: '2022-06-21T08:25:21.300Z'
+            example-3:
+              summary: Successful Token Burn
+              value:
+                data:
+                  status: succeeded
+                  _id: 62b197348c26160014943a14
+                  name: adminApprove
+                  data:
+                    tokenAddress: '0xaf03155DF641f77917803C634E9e4d808ea42ae4'
+                    bridgeType: home
+                    accountAddress: '0xbC3bA1ae0a4Cf6269F79d0D30767C60cB58D7Ff2'
+                    amount: '10000000000000000000'
+                    wallet: '0xBE06B7DF117dc1D6cD63aa133d6f4dfa614ed87C'
+                    spender: '0xbC3bA1ae0a4Cf6269F79d0D30767C60cB58D7Ff2'
+                    burnFromAddress: '0xBE06B7DF117dc1D6cD63aa133d6f4dfa614ed87C'
+                    correlationId: 1003-1
+                    approveToken:
+                      txHash: >-
+                        0x2b01070ec0e6d12f4c2512b8b82675dd43b3160f32a47d232c098beac7a1275c
+                      transactionBody:
+                        status: confirmed
+                        blockNumber: 17671980
+                      txFee:
+                        $numberDecimal: '105352000000000'
+                    txFee:
+                      $numberDecimal: '132193000000000'
+                    burnFrom:
+                      txHash: >-
+                        0x4b26fba71aabe8f5f13a5e9187c78ca43060d4cc6ab1cf4553b866c4e0cdcd58
+                      transactionBody:
+                        status: confirmed
+                        blockNumber: 17671981
+                      txFee:
+                        $numberDecimal: '26841000000000'
+                  createdAt: '2022-06-21T10:02:28.198Z'
+                  updatedAt: '2022-06-21T10:02:35.493Z'
+                  __v: 0
+                  accountAddress: '0xbC3bA1ae0a4Cf6269F79d0D30767C60cB58D7Ff2'
+                  lastFinishedAt: '2022-06-21T10:02:35.492Z'
+            example-4:
+              summary: Successful Wallet Creation
+              value:
+                data:
+                  status: succeeded
+                  _id: 62b179ee8c26160014940e7f
+                  name: createWallet
+                  data:
+                    owner: '0xbC3bA1ae0a4Cf6269F79d0D30767C60cB58D7Ff2'
+                    phoneNumber: '+972777777777'
+                    _id: 62b179ee8c26160014940e7d
+                    salt: >-
+                      0xed097dfc637a8e5b3ab141691c2477fbb456deff41d51537a41d8b2be067c966
+                    txHash: >-
+                      0x9dfe4e7ee54d75b3eaa058b0735f0ff10dcf40989f878c20be1a9f395f3e6eee
+                    transactionBody:
+                      status: confirmed
+                      blockNumber: 17670507
+                    txFee:
+                      $numberDecimal: '554842000000000'
+                    walletAddress: '0xBE06B7DF117dc1D6cD63aa133d6f4dfa614ed87C'
+                  createdAt: '2022-06-21T07:57:34.503Z'
+                  updatedAt: '2022-06-21T07:58:40.875Z'
+                  __v: 0
+                  accountAddress: '0xaeBDf18Dc2f383704d60FB16e359A375A1212cE8'
+                  lastFinishedAt: '2022-06-21T07:58:40.873Z'
+  method: get
+  path: '/jobs/{jobId}'
+  servers:
+    - url: 'https://api.miexs.com/api/v0'
+  info:
+    title: Admin API
+    description: >-
+      With Fuse Admin API you can create and manage custodial wallets for your
+      users to offer a Web2-like experience, as well as create, mint, and burn
+      tokens for your economies/communities.
+    version: 1.0.0
+  postman:
+    name: Get Job by Id
+    description:
+      content: Check the status of a job you created by jobId
+      type: text/plain
+    url:
+      path:
+        - jobs
+        - ':jobId'
+      host:
+        - '{{baseUrl}}'
+      query:
+        - disabled: false
+          description:
+            content: (Required) Your Public API key
+            type: text/plain
+          key: apiKey
+          value: ''
+      variable:
+        - disabled: false
+          description:
+            content: (Required) (Required) The Id of the created job
+            type: text/plain
+          type: any
+          value: ''
+          key: jobId
+    header:
+      - disabled: false
+        description:
+          content: (Required) You Secret API key
+          type: text/plain
+        key: API-SECRET
+        value: ''
+      - key: Accept
+        value: application/json
+    method: GET
+sidebar_class_name: get api-method
 info_path: docs/admin-api/admin-api
 custom_edit_url: null
 ---
+
 
 import ApiTabs from "@theme/ApiTabs";
 import DiscriminatorTabs from "@theme/DiscriminatorTabs";
