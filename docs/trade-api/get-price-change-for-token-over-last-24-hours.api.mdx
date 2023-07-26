@@ -1,15 +1,107 @@
 ---
 id: get-price-change-for-token-over-last-24-hours
-title: "Get Price Change for Token Over Last 24 hours"
-description: "Get Price Change for Token Over Last 24 hours"
-sidebar_label: "Get Price Change for Token Over Last 24 hours"
+title: Get Price Change for Token Over Last 24 hours
+description: Get Price Change for Token Over Last 24 hours
+sidebar_label: Get Price Change for Token Over Last 24 hours
 hide_title: true
 hide_table_of_contents: true
-api: {"tags":["Price Change"],"parameters":[{"name":"apiKey","in":"query","schema":{"type":"string"},"description":"(Required) Your Public API key","example":"{{publicKey}}"},{"name":"tokenAddress","in":"path","schema":{"type":"string"},"required":true,"description":"Token Contract Address","example":"0x495d133B938596C9984d462F007B676bDc57eCEC"}],"responses":{"200":{"description":"OK","headers":{"Date":{"schema":{"type":"string","example":"Thu, 23 Jun 2022 11:10:49 GMT"}},"Content-Type":{"schema":{"type":"string","example":"application/json; charset=utf-8"}},"Content-Length":{"schema":{"type":"integer","example":"43"}},"Connection":{"schema":{"type":"string","example":"keep-alive"}},"X-Powered-By":{"schema":{"type":"string","example":"Express"}},"ETag":{"schema":{"type":"string","example":"W/\"2b-09n8BxPVYhIJI+Oxgz81tw6CkF0\""}}},"content":{"application/json":{"schema":{"type":"object"},"example":{"data":{"priceChange":"2.4994526629074656","currentPrice":"0.00017950420850392727","previousPrice":"0.0001751269922330876"}}}}}},"description":"Get Price Change for Token Over Last 24 hours","method":"get","path":"/trade/pricechange/{tokenAddress}","servers":[{"url":"https://api.miexs.com/api/v0"}],"info":{"title":"Trade API","version":"1.0.0"},"postman":{"name":"Get Price Change for Token Over Last 24 hours","description":{"type":"text/plain"},"url":{"path":["trade","pricechange",":tokenAddress"],"host":["{{baseUrl}}"],"query":[{"disabled":false,"description":{"content":"(Required) Your Public API key","type":"text/plain"},"key":"apiKey","value":""}],"variable":[{"disabled":false,"description":{"content":"(Required) Token Contract Address","type":"text/plain"},"type":"any","value":"","key":"tokenAddress"}]},"header":[{"key":"Accept","value":"application/json"}],"method":"GET"}}
-sidebar_class_name: "get api-method"
+api:
+  tags:
+    - Price Change
+  parameters:
+    - name: apiKey
+      in: query
+      schema:
+        type: string
+      description: (Required) Your Public API key
+      example: '{{publicKey}}'
+    - name: tokenAddress
+      in: path
+      schema:
+        type: string
+      required: true
+      description: Token Contract Address
+      example: '0x495d133B938596C9984d462F007B676bDc57eCEC'
+  responses:
+    '200':
+      description: OK
+      headers:
+        Date:
+          schema:
+            type: string
+            example: 'Thu, 23 Jun 2022 11:10:49 GMT'
+        Content-Type:
+          schema:
+            type: string
+            example: application/json; charset=utf-8
+        Content-Length:
+          schema:
+            type: integer
+            example: '43'
+        Connection:
+          schema:
+            type: string
+            example: keep-alive
+        X-Powered-By:
+          schema:
+            type: string
+            example: Express
+        ETag:
+          schema:
+            type: string
+            example: W/"2b-09n8BxPVYhIJI+Oxgz81tw6CkF0"
+      content:
+        application/json:
+          schema:
+            type: object
+          example:
+            data:
+              priceChange: '2.4994526629074656'
+              currentPrice: '0.00017950420850392727'
+              previousPrice: '0.0001751269922330876'
+  description: Get Price Change for Token Over Last 24 hours
+  method: get
+  path: '/trade/pricechange/{tokenAddress}'
+  servers:
+    - url: 'https://api.miexs.com/api/v0'
+  info:
+    title: Trade API
+    version: 1.0.0
+  postman:
+    name: Get Price Change for Token Over Last 24 hours
+    description:
+      type: text/plain
+    url:
+      path:
+        - trade
+        - pricechange
+        - ':tokenAddress'
+      host:
+        - '{{baseUrl}}'
+      query:
+        - disabled: false
+          description:
+            content: (Required) Your Public API key
+            type: text/plain
+          key: apiKey
+          value: ''
+      variable:
+        - disabled: false
+          description:
+            content: (Required) Token Contract Address
+            type: text/plain
+          type: any
+          value: ''
+          key: tokenAddress
+    header:
+      - key: Accept
+        value: application/json
+    method: GET
+sidebar_class_name: get api-method
 info_path: docs/trade-api/trade-api
 custom_edit_url: null
 ---
+
 
 import ApiTabs from "@theme/ApiTabs";
 import DiscriminatorTabs from "@theme/DiscriminatorTabs";
