@@ -1,15 +1,105 @@
 ---
 id: get-latest-price-for-a-token
-title: "Get Latest Price for a Token"
-description: "Get Latest Price for a Token"
-sidebar_label: "Get Latest Price for a Token"
+title: Get Latest Price for a Token
+description: Get Latest Price for a Token
+sidebar_label: Get Latest Price for a Token
 hide_title: true
 hide_table_of_contents: true
-api: {"tags":["Price"],"parameters":[{"name":"apiKey","in":"query","schema":{"type":"string"},"description":"(Required) Your Public API key","example":"{{publicKey}}"},{"name":"tokenAddress","in":"path","schema":{"type":"string"},"required":true,"description":"Token Contract Address","example":"0x495d133B938596C9984d462F007B676bDc57eCEC"}],"responses":{"200":{"description":"OK","headers":{"Date":{"schema":{"type":"string","example":"Thu, 23 Jun 2022 11:10:49 GMT"}},"Content-Type":{"schema":{"type":"string","example":"application/json; charset=utf-8"}},"Content-Length":{"schema":{"type":"integer","example":"43"}},"Connection":{"schema":{"type":"string","example":"keep-alive"}},"X-Powered-By":{"schema":{"type":"string","example":"Express"}},"ETag":{"schema":{"type":"string","example":"W/\"2b-09n8BxPVYhIJI+Oxgz81tw6CkF0\""}}},"content":{"application/json":{"schema":{"type":"object"},"example":{"data":{"price":"0.00017950420850392727"}}}}}},"description":"Get Latest Price for a Token","method":"get","path":"/trade/price/{tokenAddress}","servers":[{"url":"https://api.miexs.com/api/v0"}],"info":{"title":"Trade API","version":"1.0.0"},"postman":{"name":"Get Latest Price for a Token","description":{"type":"text/plain"},"url":{"path":["trade","price",":tokenAddress"],"host":["{{baseUrl}}"],"query":[{"disabled":false,"description":{"content":"(Required) Your Public API key","type":"text/plain"},"key":"apiKey","value":""}],"variable":[{"disabled":false,"description":{"content":"(Required) Token Contract Address","type":"text/plain"},"type":"any","value":"","key":"tokenAddress"}]},"header":[{"key":"Accept","value":"application/json"}],"method":"GET"}}
-sidebar_class_name: "get api-method"
+api:
+  tags:
+    - Price
+  parameters:
+    - name: apiKey
+      in: query
+      schema:
+        type: string
+      description: (Required) Your Public API key
+      example: '{{publicKey}}'
+    - name: tokenAddress
+      in: path
+      schema:
+        type: string
+      required: true
+      description: Token Contract Address
+      example: '0x495d133B938596C9984d462F007B676bDc57eCEC'
+  responses:
+    '200':
+      description: OK
+      headers:
+        Date:
+          schema:
+            type: string
+            example: 'Thu, 23 Jun 2022 11:10:49 GMT'
+        Content-Type:
+          schema:
+            type: string
+            example: application/json; charset=utf-8
+        Content-Length:
+          schema:
+            type: integer
+            example: '43'
+        Connection:
+          schema:
+            type: string
+            example: keep-alive
+        X-Powered-By:
+          schema:
+            type: string
+            example: Express
+        ETag:
+          schema:
+            type: string
+            example: W/"2b-09n8BxPVYhIJI+Oxgz81tw6CkF0"
+      content:
+        application/json:
+          schema:
+            type: object
+          example:
+            data:
+              price: '0.00017950420850392727'
+  description: Get Latest Price for a Token
+  method: get
+  path: '/trade/price/{tokenAddress}'
+  servers:
+    - url: 'https://api.miexs.com/api/v0'
+  info:
+    title: Trade API
+    version: 1.0.0
+  postman:
+    name: Get Latest Price for a Token
+    description:
+      type: text/plain
+    url:
+      path:
+        - trade
+        - price
+        - ':tokenAddress'
+      host:
+        - '{{baseUrl}}'
+      query:
+        - disabled: false
+          description:
+            content: (Required) Your Public API key
+            type: text/plain
+          key: apiKey
+          value: ''
+      variable:
+        - disabled: false
+          description:
+            content: (Required) Token Contract Address
+            type: text/plain
+          type: any
+          value: ''
+          key: tokenAddress
+    header:
+      - key: Accept
+        value: application/json
+    method: GET
+sidebar_class_name: get api-method
 info_path: docs/trade-api/trade-api
 custom_edit_url: null
 ---
+
 
 import ApiTabs from "@theme/ApiTabs";
 import DiscriminatorTabs from "@theme/DiscriminatorTabs";
