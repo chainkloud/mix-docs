@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Mix Documentation',
-  url: 'https://docs.fuse.io',
+  url: 'https://docv2.miexs.com',
   baseUrl: '/',
   onBrokenLinks: 'log',
   onBrokenMarkdownLinks: 'warn',
@@ -172,7 +172,7 @@ const config = {
               },
               {
                 label: 'Documentation',
-                to: 'https://docs.fuse.io/',
+                to: 'https://docv2.miexs.com/',
               },
               {
                 label: 'Staking',
