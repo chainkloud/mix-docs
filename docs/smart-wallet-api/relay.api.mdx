@@ -1,15 +1,212 @@
 ---
 id: relay
-title: "Relay"
-description: "Relay"
-sidebar_label: "Relay"
+title: Relay
+description: Relay
+sidebar_label: Relay
 hide_title: true
 hide_table_of_contents: true
-api: {"tags":["Smart Wallets"],"requestBody":{"content":{"application/json":{"schema":{"type":"object","properties":{"gasPrice":{"type":"number","example":0},"gasLimit":{"type":"string","example":700000},"transactionBody":{"type":"object","example":{"status":"pending","from":"0x545d3dD729d848023938D5F94af2346868EED7b9","to":"0x7Ceabc27B1dc6A065fAD85A86AFBaF97F7692088","value":1000000000000000,"type":"SEND","asset":"MIX","tokenName":"FuseToken","tokenSymbol":"MIX","tokenDecimal":18,"tokenAddress":"0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"}},"walletAddress":{"type":"string","example":"0x545d3dD729d848023938D5F94af2346868EED7b9"},"walletModuleAddress":{"type":"string","example":"0xF66e26Fd99F4687CC29148BE2e331df2e49E249E"},"data":{"type":"string","example":"0x2df546f4000000000000000000000000545d3dd729d848023938d5f94af2346868eed7b9000000000000000000000000eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee0000000000000000000000007ceabc27b1dc6a065fad85a86afbaf97f769208800000000000000000000000000000000000000000000000000038d7ea4c6800000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000000"},"nonce":{"type":"string","example":"0x000000000000000000000000008800ae000000000000000000000186127a87f6"},"methodName":{"type":"string","example":"transferToken"},"signature":{"type":"string","example":"0x0943cb68c40fe495be75dca17ee4e577a5aa7051949cd837f073d470694705cc75013e034e1dba7a799f432a9be3ed45305d5b299a2ed8c61c8581f1a868099c1c"},"walletModule":{"type":"string","example":"TransferManager"}},"example":{"gasPrice":0,"gasLimit":700000,"relayBody":null,"txMetadata":null,"transactionBody":{"status":"pending","from":"0x545d3dD729d848023938D5F94af2346868EED7b9","to":"0x7Ceabc27B1dc6A065fAD85A86AFBaF97F7692088","value":1000000000000000,"type":"SEND","asset":"MIX","tokenName":"FuseToken","tokenSymbol":"MIX","tokenDecimal":18,"tokenAddress":"0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"},"walletAddress":"0x545d3dD729d848023938D5F94af2346868EED7b9","walletModuleAddress":"0xF66e26Fd99F4687CC29148BE2e331df2e49E249E","data":"0x2df546f4000000000000000000000000545d3dd729d848023938d5f94af2346868eed7b9000000000000000000000000eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee0000000000000000000000007ceabc27b1dc6a065fad85a86afbaf97f769208800000000000000000000000000000000000000000000000000038d7ea4c6800000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000000","nonce":"0x000000000000000000000000008800ae000000000000000000000186127a87f6","methodName":"transferToken","signature":"0x0943cb68c40fe495be75dca17ee4e577a5aa7051949cd837f073d470694705cc75013e034e1dba7a799f432a9be3ed45305d5b299a2ed8c61c8581f1a868099c1c","walletModule":"TransferManager"}}}}},"security":[{"bearerAuth":[]}],"parameters":[{"name":"apiKey","in":"query","schema":{"type":"string"},"description":"(Required) Your Public API key","example":"{{publicKey}}"}],"responses":{"201":{"description":"Created","content":{"application/json":{"schema":{"type":"object"},"example":{"connectionUrl":"ws://localhost:5007","transactionId":"0xc314fe5bcf9cf5dcb600da9673b779972e63622af73f62629700dfb04c1cb853"}}}},"401":{"description":"Unauthorized","content":{"application/json":{"schema":{"type":"object"},"example":{"statusCode":401,"errorMessage":{"statusCode":401,"message":"Unauthorized"},"path":"/api/v1/smart-wallets/relay?apiKey={{publicKey}}"}}}},"403":{"description":"Forbidden","content":{"application/json":{"schema":{"type":"object"},"example":{"statusCode":403,"errorMessage":{"statusCode":403,"message":"Forbidden resource","error":"Forbidden"},"path":"/api/v1/smart-wallets/relay?apiKey={{publicKey}}"}}}}},"description":"Relay","method":"post","path":"/api/v1/smart-wallets/relay","servers":[{"url":"https://api.miexs.com"}],"securitySchemes":{"bearerAuth":{"bearerFormat":"JWT","type":"http","scheme":"bearer"}},"jsonRequestBodyExample":{"gasPrice":0,"gasLimit":700000,"relayBody":null,"txMetadata":null,"transactionBody":{"status":"pending","from":"0x545d3dD729d848023938D5F94af2346868EED7b9","to":"0x7Ceabc27B1dc6A065fAD85A86AFBaF97F7692088","value":1000000000000000,"type":"SEND","asset":"MIX","tokenName":"FuseToken","tokenSymbol":"MIX","tokenDecimal":18,"tokenAddress":"0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"},"walletAddress":"0x545d3dD729d848023938D5F94af2346868EED7b9","walletModuleAddress":"0xF66e26Fd99F4687CC29148BE2e331df2e49E249E","data":"0x2df546f4000000000000000000000000545d3dd729d848023938d5f94af2346868eed7b9000000000000000000000000eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee0000000000000000000000007ceabc27b1dc6a065fad85a86afbaf97f769208800000000000000000000000000000000000000000000000000038d7ea4c6800000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000000","nonce":"0x000000000000000000000000008800ae000000000000000000000186127a87f6","methodName":"transferToken","signature":"0x0943cb68c40fe495be75dca17ee4e577a5aa7051949cd837f073d470694705cc75013e034e1dba7a799f432a9be3ed45305d5b299a2ed8c61c8581f1a868099c1c","walletModule":"TransferManager"},"info":{"title":"Smart Wallets API","version":"1.0.0"},"postman":{"name":"Relay","description":{"type":"text/plain"},"url":{"path":["api","v1","smart-wallets","relay"],"host":["{{baseUrl}}"],"query":[{"disabled":false,"description":{"content":"(Required) Your Public API key","type":"text/plain"},"key":"apiKey","value":""}],"variable":[]},"header":[{"key":"Content-Type","value":"application/json"},{"key":"Accept","value":"application/json"}],"method":"POST","body":{"mode":"raw","raw":"\"\"","options":{"raw":{"language":"json"}}},"auth":{"type":"bearer","bearer":[{"type":"any","value":"<Bearer Token>","key":"token"}]}}}
-sidebar_class_name: "post api-method"
+api:
+  tags:
+    - Smart Wallets
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            gasPrice:
+              type: number
+              example: 0
+            gasLimit:
+              type: string
+              example: 700000
+            transactionBody:
+              type: object
+              example:
+                status: pending
+                from: '0x545d3dD729d848023938D5F94af2346868EED7b9'
+                to: '0x7Ceabc27B1dc6A065fAD85A86AFBaF97F7692088'
+                value: 1000000000000000
+                type: SEND
+                asset: MIX
+                tokenName: FuseToken
+                tokenSymbol: MIX
+                tokenDecimal: 18
+                tokenAddress: '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE'
+            walletAddress:
+              type: string
+              example: '0x545d3dD729d848023938D5F94af2346868EED7b9'
+            walletModuleAddress:
+              type: string
+              example: '0xF66e26Fd99F4687CC29148BE2e331df2e49E249E'
+            data:
+              type: string
+              example: >-
+                0x2df546f4000000000000000000000000545d3dd729d848023938d5f94af2346868eed7b9000000000000000000000000eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee0000000000000000000000007ceabc27b1dc6a065fad85a86afbaf97f769208800000000000000000000000000000000000000000000000000038d7ea4c6800000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000000
+            nonce:
+              type: string
+              example: >-
+                0x000000000000000000000000008800ae000000000000000000000186127a87f6
+            methodName:
+              type: string
+              example: transferToken
+            signature:
+              type: string
+              example: >-
+                0x0943cb68c40fe495be75dca17ee4e577a5aa7051949cd837f073d470694705cc75013e034e1dba7a799f432a9be3ed45305d5b299a2ed8c61c8581f1a868099c1c
+            walletModule:
+              type: string
+              example: TransferManager
+          example:
+            gasPrice: 0
+            gasLimit: 700000
+            relayBody: null
+            txMetadata: null
+            transactionBody:
+              status: pending
+              from: '0x545d3dD729d848023938D5F94af2346868EED7b9'
+              to: '0x7Ceabc27B1dc6A065fAD85A86AFBaF97F7692088'
+              value: 1000000000000000
+              type: SEND
+              asset: MIX
+              tokenName: FuseToken
+              tokenSymbol: MIX
+              tokenDecimal: 18
+              tokenAddress: '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE'
+            walletAddress: '0x545d3dD729d848023938D5F94af2346868EED7b9'
+            walletModuleAddress: '0xF66e26Fd99F4687CC29148BE2e331df2e49E249E'
+            data: >-
+              0x2df546f4000000000000000000000000545d3dd729d848023938d5f94af2346868eed7b9000000000000000000000000eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee0000000000000000000000007ceabc27b1dc6a065fad85a86afbaf97f769208800000000000000000000000000000000000000000000000000038d7ea4c6800000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000000
+            nonce: '0x000000000000000000000000008800ae000000000000000000000186127a87f6'
+            methodName: transferToken
+            signature: >-
+              0x0943cb68c40fe495be75dca17ee4e577a5aa7051949cd837f073d470694705cc75013e034e1dba7a799f432a9be3ed45305d5b299a2ed8c61c8581f1a868099c1c
+            walletModule: TransferManager
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: apiKey
+      in: query
+      schema:
+        type: string
+      description: (Required) Your Public API key
+      example: '{{publicKey}}'
+  responses:
+    '201':
+      description: Created
+      content:
+        application/json:
+          schema:
+            type: object
+          example:
+            connectionUrl: 'ws://localhost:5007'
+            transactionId: '0xc314fe5bcf9cf5dcb600da9673b779972e63622af73f62629700dfb04c1cb853'
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            type: object
+          example:
+            statusCode: 401
+            errorMessage:
+              statusCode: 401
+              message: Unauthorized
+            path: '/api/v1/smart-wallets/relay?apiKey={{publicKey}}'
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            type: object
+          example:
+            statusCode: 403
+            errorMessage:
+              statusCode: 403
+              message: Forbidden resource
+              error: Forbidden
+            path: '/api/v1/smart-wallets/relay?apiKey={{publicKey}}'
+  description: Relay
+  method: post
+  path: /api/v1/smart-wallets/relay
+  servers:
+    - url: 'https://api.miexs.com'
+  securitySchemes:
+    bearerAuth:
+      bearerFormat: JWT
+      type: http
+      scheme: bearer
+  jsonRequestBodyExample:
+    gasPrice: 0
+    gasLimit: 700000
+    relayBody: null
+    txMetadata: null
+    transactionBody:
+      status: pending
+      from: '0x545d3dD729d848023938D5F94af2346868EED7b9'
+      to: '0x7Ceabc27B1dc6A065fAD85A86AFBaF97F7692088'
+      value: 1000000000000000
+      type: SEND
+      asset: MIX
+      tokenName: FuseToken
+      tokenSymbol: MIX
+      tokenDecimal: 18
+      tokenAddress: '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE'
+    walletAddress: '0x545d3dD729d848023938D5F94af2346868EED7b9'
+    walletModuleAddress: '0xF66e26Fd99F4687CC29148BE2e331df2e49E249E'
+    data: >-
+      0x2df546f4000000000000000000000000545d3dd729d848023938d5f94af2346868eed7b9000000000000000000000000eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee0000000000000000000000007ceabc27b1dc6a065fad85a86afbaf97f769208800000000000000000000000000000000000000000000000000038d7ea4c6800000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000000
+    nonce: '0x000000000000000000000000008800ae000000000000000000000186127a87f6'
+    methodName: transferToken
+    signature: >-
+      0x0943cb68c40fe495be75dca17ee4e577a5aa7051949cd837f073d470694705cc75013e034e1dba7a799f432a9be3ed45305d5b299a2ed8c61c8581f1a868099c1c
+    walletModule: TransferManager
+  info:
+    title: Smart Wallets API
+    version: 1.0.0
+  postman:
+    name: Relay
+    description:
+      type: text/plain
+    url:
+      path:
+        - api
+        - v1
+        - smart-wallets
+        - relay
+      host:
+        - '{{baseUrl}}'
+      query:
+        - disabled: false
+          description:
+            content: (Required) Your Public API key
+            type: text/plain
+          key: apiKey
+          value: ''
+      variable: []
+    header:
+      - key: Content-Type
+        value: application/json
+      - key: Accept
+        value: application/json
+    method: POST
+    body:
+      mode: raw
+      raw: '""'
+      options:
+        raw:
+          language: json
+    auth:
+      type: bearer
+      bearer:
+        - type: any
+          value: <Bearer Token>
+          key: token
+sidebar_class_name: post api-method
 info_path: docs/smart-wallet-api/smart-wallets-api
 custom_edit_url: null
 ---
+
 
 import ApiTabs from "@theme/ApiTabs";
 import DiscriminatorTabs from "@theme/DiscriminatorTabs";
